@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FlexWork – Hire Expert Interview Panels in 24 Hours</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<style>
+:root {
+  --brand: #7b7dfc;
+  --brand-dark: #7c77e4;
+  --accent: #ffcd00;
+  --text: #0d0d1a;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --bg:#eae9ff;
+  --green: #22c55e;
+  --r: 14px;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  color: #0d0d1a;
+  background: #fff;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* ── NAV ── */
+.navbar {
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+  height: 80px;
+  padding: 0 80px;
+}
+.navbar-brand img { height: 56px; width: auto; }
+.nav-link {
+  color: #374151 !important;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color .2s;
+}
+.nav-link:hover { color: var(--brand) !important; }
+.btn-login {
+  background: none;
+  border: none;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #374151;
+  padding: 8px 16px;
+}
+.btn-nav-cta {
+  background: var(--accent);
+  color: #111 !important;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 10px 22px;
+  border-radius: 9px;
+  text-decoration: none;
+  transition: all .2s;
+}
+.btn-nav-cta:hover { background: #e09520; box-shadow: 0 4px 14px rgba(245,166,35,.4); }
+
+/* ── HERO ── */
+.hero-section { background: #eef0ff; overflow: visible; }
+.hero-inner { padding: 60px 80px; }
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(108,99,255,.1);
+  color: var(--brand);
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 20px;
+  margin-bottom: 24px;
+  border: 1px solid rgba(108,99,255,.2);
+  font-family: 'DM Sans', sans-serif;
+}
+.hero-badge-icon {
+  width: 22px; height: 22px;
+  background: rgba(108,99,255,.18);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.72rem;
+  flex-shrink: 0;
+}
+.hero-h1 {
+  font-size: 2.5rem;
+  line-height: 1.1;
+  font-weight: 800;
+  margin-bottom: 18px;
+  letter-spacing: -0.5px;
+  color: #111;
+}
+.hero-h1 span { color: var(--brand); }
+.hero-sub { color: #6b7280; font-size: 1.15rem; margin-bottom: 32px; line-height: 1.72; }
+.btn-hero-primary {
+  background: var(--brand);
+  color: #fff !important;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  padding: 14px 26px;
+  border-radius: 10px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all .2s;
+}
+.btn-hero-primary:hover { background: var(--brand-dark); box-shadow: 0 6px 20px rgba(108,99,255,.35); transform: translateY(-1px); }
+.btn-hero-secondary {
+  background: #fff;
+  color: #111 !important;
+  border: 1.5px solid #d1d5db;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 13px 24px;
+  border-radius: 10px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all .2s;
+}
+.btn-hero-secondary:hover { border-color: var(--brand); color: var(--brand) !important; }
+.play-circle {
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  border: 1.5px solid #9ca3af;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.6rem;
+}
+.social-proof { display: flex; align-items: center; gap: 12px; }
+.avatars { display: flex; align-items: center; }
+.av {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  border: 2.5px solid #eef0ff;
+  margin-left: -10px;
+  object-fit: cover;
+}
+.av:first-child { margin-left: 0; }
+.social-txt { font-size: 0.85rem; color: #6b7280; }
+.social-txt strong { color: #111; font-weight: 600; }
+.dash-wrap {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 48px rgba(108,99,255,.16), 0 0 0 1px rgba(108,99,255,.08);
+  padding: 12px;
+  width: 100%;
+  animation: riseUp .8s cubic-bezier(.22,1,.36,1) both .2s;
+  overflow: hidden;
+}
+.dash-wrap img { width: 100%; height: auto; display: block; border-radius: 8px; }
+@keyframes riseUp { from { opacity:0; transform: translateY(30px); } to { opacity:1; transform: translateY(0); } }
+
+/* ── TRUSTED / FEATURES ── */
+.trusted-section { background: #eef0ff; position: relative; overflow: hidden; }
+.trusted-dot-grid {
+  position: absolute; top: 20px; left: 28px;
+  display: grid; grid-template-columns: repeat(6,1fr);
+  gap: 7px; opacity: .35; pointer-events: none;
+}
+.trusted-dot-grid span { width: 5px; height: 5px; border-radius: 50%; background: #6C63FF; display: block; }
+.feat-card {
+  background: #fff;
+  border: none;
+  border-radius: 16px;
+  padding: 32px 28px;
+  text-align: left;
+  box-shadow: 0 2px 16px rgba(0,0,0,.06);
+  transition: box-shadow .2s, transform .2s;
+  height: 100%;
+}
+.feat-card:hover { box-shadow: 0 6px 28px rgba(108,99,255,.13); transform: translateY(-3px); }
+.feat-ic {
+  width: 56px; height: 56px;
+  border-radius: 50%;
+  background: var(--brand);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 24px;
+}
+.feat-ic svg { width: 26px; height: 26px; stroke: #fff; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+/* ── HOW IT WORKS ── */
+.hiw-section { background: #eef0ff; }
+.step { display: flex; gap: 14px; align-items: flex-start; }
+.step-num {
+  width: 34px; height: 34px;
+  border-radius: 9px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; margin-top: 1px;
+}
+.step-num svg { width: 18px; height: 18px; stroke: #fff; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.ip-card { border-radius: 16px; overflow: hidden; }
+.ip-card img { width: 100%; height: auto; display: block; border-radius: 12px; }
+
+/* ── AI SECTION ── */
+.ai-section { background: #f0f2ff; }
+.laptop-wrap { filter: drop-shadow(0 16px 40px rgba(0,0,0,.18)); }
+.ai-feat {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 13px 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  transition: all .2s;
+  cursor: pointer;
+  background: #fff;
+  margin-bottom: 10px;
+}
+.ai-feat:hover { box-shadow: 0 2px 12px rgba(108,99,255,.12); border-color: rgba(108,99,255,.3); }
+.ai-feat-ic {
+  width: 36px; height: 36px;
+  border-radius: 9px;
+  background: rgba(108,99,255,.1);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.ai-feat-ic svg { width: 18px; height: 18px; stroke: var(--brand); fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.ai-feat h4 { font-size: 0.85rem; font-weight: 700; margin-bottom: 2px; color: #111; }
+.ai-feat p { font-size: 0.78rem; color: #242526; margin: 0; }
+.chevron { color: #c4c8d4; font-size: 1.1rem; font-weight: 300; }
+
+/* ── STATS STRIP ── */
+.stats-strip { background: #eef0ff; padding: 20px 48px; }
+.stats-inner {
+  background: var(--brand);
+  border-radius: 16px;
+  overflow: hidden;
+}
+.stat-div { position: relative; }
+.stat-div:not(:last-child)::after {
+  content: ''; position: absolute; right: 0; top: 18%;
+  height: 64%; width: 1px; background: rgba(255,255,255,.22);
+}
+.stat-item { display: flex; align-items: center; gap: 14px; color: #fff; padding: 26px 28px; }
+.stat-ic-wrap {
+  width: 44px; height: 44px;
+  border-radius: 10px;
+  background: rgba(255,255,255,.15);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.stat-ic-wrap svg { width: 22px; height: 22px; stroke: #fff; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.stat-val { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 1.55rem; line-height: 1.1; margin-bottom: 2px; }
+.stat-lbl { font-size: 0.75rem; opacity: .75; line-height: 1.3; }
+
+/* ── PRICING ── */
+.pricing-section { background: #eef0ff; }
+.billing-lbl { font-weight: 500; color: #6b7280; font-size: 0.85rem; display: flex; align-items: center; gap: 7px; }
+.billing-lbl.active { color: #111; font-weight: 700; }
+.billing-toggle {
+  width: 42px; height: 24px;
+  background: #d1d5db;
+  border-radius: 12px;
+  padding: 3px;
+  cursor: pointer;
+  transition: background .3s;
+  display: flex; align-items: center;
+}
+.billing-toggle.on { background: var(--brand); }
+.billing-knob {
+  width: 18px; height: 18px;
+  background: #fff;
+  border-radius: 50%;
+  transition: transform .3s;
+  box-shadow: 0 1px 4px rgba(0,0,0,.25);
+}
+.billing-toggle.on .billing-knob { transform: translateX(18px); }
+.save-pill { background: #d1fae5; color: #059669; font-size: 0.72rem; font-weight: 700; padding: 4px 12px; border-radius: 20px; }
+
+.plan {
+  background: #fff;
+  border: 1.5px solid #e2e4f0;
+  border-radius: 16px;
+  padding: 32px 28px;
+  text-align: left;
+  position: relative;
+  transition: box-shadow .2s;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.plan:hover { box-shadow: 0 6px 24px rgba(0,0,0,.07); }
+.plan.popular {
+  background: linear-gradient(160deg, #7b74f5 0%, #5a52e0 100%);
+  border: none;
+  color: #fff;
+  box-shadow: 0 12px 40px rgba(108,99,255,.35);
+  z-index: 2;
+}
+.plan-badge {
+  position: absolute; top: 22px; right: 20px;
+  background: rgba(255,255,255,.22);
+  color: #fff;
+  font-weight: 600; font-size: 0.63rem;
+  padding: 5px 12px; border-radius: 8px;
+}
+.plan-name { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 1.2rem; margin-bottom: 4px; color: #111; }
+.plan.popular .plan-name { color: #fff; }
+.plan-desc { font-size: 0.78rem; color: #9ca3af; margin-bottom: 20px; line-height: 1.5; }
+.plan.popular .plan-desc { color: rgba(255,255,255,.72); }
+.plan-price { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 2.2rem; margin-bottom: 20px; color: #111; line-height: 1; display: flex; align-items: baseline; gap: 6px; }
+.plan-price span { font-size: 0.82rem; font-weight: 400; color: #9ca3af; }
+.plan.popular .plan-price { color: #fff; }
+.plan.popular .plan-price span { color: rgba(255,255,255,.65); }
+.plan-feats { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 11px; margin: 0 0 28px; font-size: 0.82rem; flex-grow: 1; }
+.plan-feats li { display: flex; align-items: center; gap: 10px; color: #374151; }
+.plan-feats li::before {
+  content: ''; width: 18px; height: 18px; border-radius: 50%; flex-shrink: 0;
+  background-color: rgba(108,99,255,.1);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236C63FF' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: center; background-size: 10px;
+}
+.plan.popular .plan-feats li { color: rgba(255,255,255,.93); }
+.plan.popular .plan-feats li::before {
+  background-color: rgba(255,255,255,.18);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+}
+.btn-plan {
+  margin-top: auto; width: 100%; padding: 14px; border-radius: 10px;
+  font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 0.88rem;
+  cursor: pointer; transition: all .2s; border: 1.5px solid #d1d5db;
+  background: #fff; color: var(--brand);
+}
+.btn-plan:hover { border-color: var(--brand); box-shadow: 0 3px 12px rgba(108,99,255,.15); }
+.plan.popular .btn-plan { background: #fff; color: var(--brand); border-color: transparent; box-shadow: 0 3px 12px rgba(0,0,0,.12); }
+.plan.popular .btn-plan:hover { background: #f5f5ff; }
+
+/* ── CTA BANNER ── */
+.cta-banner { background: #f5f5ff; }
+.cta-inner {
+  background: #f4f6ff;
+  border-radius: 24px;
+  border: 1px solid #dcdceb;
+  box-shadow: 0 10px 25px -5px rgba(0,0,0,.1), 0 8px 10px -6px rgba(0,0,0,.1);
+  position: relative;
+  overflow: hidden;
+}
+.cta-icon-wrap {
+  width: 72px; height: 72px; min-width: 72px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #8d82ff, #7b7dfc);
+  display: flex; align-items: center; justify-content: center;
+}
+.cta-icon-wrap svg { width: 34px; height: 34px; stroke: #fff; fill: none; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.btn-cta-primary {
+  background: #ffcd00; color: #111827 !important;
+  border: none; padding: 15px 34px; border-radius: 12px;
+  font-weight: 700; font-size: 0.92rem;
+  text-decoration: none; display: inline-flex; align-items: center; gap: 10px;
+  box-shadow: 0 6px 18px rgba(255,205,0,.28); transition: .25s ease; white-space: nowrap;
+}
+.btn-cta-primary:hover { transform: translateY(-1px); }
+.btn-cta-outline {
+  background: #fff; color: #111827 !important;
+  border: 1.5px solid #d8dbe5; padding: 14px 32px; border-radius: 12px;
+  font-weight: 700; font-size: 0.92rem; text-decoration: none; transition: .25s ease; white-space: nowrap;
+}
+.dot-grid {
+  position: absolute; right: 28px; top: 50%; transform: translateY(-50%);
+  width: 74px; display: grid; grid-template-columns: repeat(4,1fr); gap: 8px; opacity: .45;
+}
+.dot-grid span { width: 6px; height: 6px; border-radius: 50%; background: #c7c9d8; }
+
+/* ── FOOTER ── */
+footer { background: #fff; border-top: 1px solid #f0f0f8; }
+.foot-logo { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 1.4rem; text-decoration: none; color: #111; display: block; margin-bottom: 8px; letter-spacing: -0.5px; }
+.foot-logo em { color: var(--brand); font-style: normal; }
+.foot-tag { font-size: 0.78rem; color: #9ca3af; margin-bottom: 18px; line-height: 1.5; }
+.soc {
+  width: 32px; height: 32px; border: 1px solid #e5e7eb; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: #6b7280; text-decoration: none; transition: all .2s;
+}
+.soc svg { width: 14px; height: 14px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.soc:hover { border-color: var(--brand); color: var(--brand); }
+.foot-col h4 { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 0.82rem; margin-bottom: 14px; color: #111; }
+.foot-col ul { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 10px; }
+.foot-col ul a { text-decoration: none; color: #6b7280; font-size: 0.8rem; transition: color .2s; }
+.foot-col ul a:hover { color: var(--brand); }
+.nl-form { display: flex; gap: 0; border: 1.5px solid #e5e7eb; border-radius: 10px; overflow: hidden; margin-top: 10px; }
+.nl-input { flex: 1; padding: 10px 12px; border: none; outline: none; font-family: 'DM Sans', sans-serif; font-size: 0.8rem; color: #111; }
+.nl-btn { background: var(--accent); border: none; padding: 10px 16px; cursor: pointer; color: #fff; font-weight: 700; font-size: 1rem; transition: background .2s; display: flex; align-items: center; justify-content: center; }
+.nl-btn:hover { background: #e09520; }
+.foot-bottom { border-top: 1px solid #f0f0f8; font-size: 0.75rem; color: #9ca3af; }
+
+/* Scroll animations */
+.anim { opacity: 0; transform: translateY(22px); transition: opacity .55s ease, transform .55s ease; }
+.anim.vis { opacity: 1; transform: translateY(0); }
+
+/* Spacing utilities override for section padding */
+.section-py { padding-top: 56px; padding-bottom: 56px; }
+.section-px { padding-left: 80px; padding-right: 80px; }
+
+@media (max-width: 991px) {
+  .section-px { padding-left: 48px; padding-right: 48px; }
+  .navbar { padding: 0 48px; }
+  .hero-inner { padding: 48px; }
+  .dash-wrap { display: none; }
+}
+@media (max-width: 576px) {
+  .section-px { padding-left: 24px; padding-right: 24px; }
+  .navbar { padding: 0 24px; }
+  .hero-inner { padding: 40px 24px; }
+  .hero-h1 { font-size: 1.9rem; }
+  .navbar-nav, .btn-login { display: none !important; }
+  .stats-inner .col-6:not(:last-child)::after { display: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="navbar navbar-expand-lg sticky-top">
+  <div class="container-fluid px-0">
+    <a href="#" class="navbar-brand ms-0">
+      <img src="logo.png" alt="FlexWork">
+    </a>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav mx-auto gap-lg-3">
+        <li class="nav-item"><a href="#" class="nav-link">Find Work</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">For Clients</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Community</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Resources</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
+      </ul>
+      <div class="d-flex align-items-center gap-2">
+        <button class="btn-login">Log In</button>
+        <a href="#" class="btn-nav-cta">Hire Expert Panel</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero-section">
+  <div class="hero-inner">
+    <div class="row align-items-center g-4">
+      <div class="col-lg-6">
+        <div class="hero-badge">
+          <span class="hero-badge-icon">👤</span>
+          Expert Interview Panels in 24 Hours
+        </div>
+        <h1 class="hero-h1">Hire Expert Interview<br>Panels in <span>24 Hours</span></h1>
+        <p class="hero-sub">Stop internal burnout. Leverage pre-vetted industry experts for structured technical evaluations. Faster hiring, zero bias.</p>
+        <div class="d-flex gap-3 align-items-center flex-wrap mb-4">
+          <a href="#" class="btn-hero-primary">Hire Expert Panel &nbsp;→</a>
+          <a href="#" class="btn-hero-secondary"><span class="play-circle">▶</span> How It Works</a>
+        </div>
+        <div class="social-proof">
+          <div class="avatars">
+            <img class="av" src="https://randomuser.me/api/portraits/women/44.jpg" alt="User 1">
+            <img class="av" src="https://randomuser.me/api/portraits/men/32.jpg" alt="User 2">
+            <img class="av" src="https://randomuser.me/api/portraits/women/68.jpg" alt="User 3">
+          </div>
+          <span class="social-txt"><strong>Trusted by 500+</strong> companies worldwide</span>
+        </div>
+      </div>
+      <div class="col-lg-6 d-none d-lg-block">
+        <div class="dash-wrap">
+          <img src="dashboard.png" alt="Dashboard">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUSTED BY / FEATURES -->
+<section class="trusted-section section-py section-px">
+  <div class="trusted-dot-grid">
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+  <div class="text-center mb-4">
+    <h2 class="fs-2 fw-bold mb-2 text-dark">Trusted by Top Companies</h2>
+    <p class="text-secondary fs-5">Helping businesses make confident hiring decisions with expert interview panels.</p>
+  </div>
+  <div class="row g-4">
+    <div class="col-md-6 col-lg-4">
+      <div class="feat-card anim">
+        <div class="feat-ic">
+          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3 class="fw-bold fs-6 mb-2">Expert-Led Interview Panels</h3>
+        <p class="text-secondary" style="font-size:.875rem;line-height:1.75;margin:0">Our panels are curated from industry professionals with proven experience in technical and behavioral interviews.</p>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-4">
+      <div class="feat-card anim">
+        <div class="feat-ic">
+          <svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        </div>
+        <h3 class="fw-bold fs-6 mb-2">Faster, Better Hiring Decisions</h3>
+        <p class="text-secondary" style="font-size:.875rem;line-height:1.75;margin:0">Get detailed feedback, scorecards, and recommendations to hire the right talent quickly.</p>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-4">
+      <div class="feat-card anim">
+        <div class="feat-ic">
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3 class="fw-bold fs-6 mb-2">Scalable &amp; Reliable Process</h3>
+        <p class="text-secondary" style="font-size:.875rem;line-height:1.75;margin:0">Whether you're hiring one or hundreds, our process scales with your needs seamlessly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="hiw-section section-py">
+  <div class="section-px">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-5">
+        <h2 class="fw-bold mb-2" style="font-size:1.75rem">How It Works</h2>
+        <p class="mb-4" style="color:#232121;font-size:1.25rem;line-height:1.7"><strong>A simple and streamlined process to conduct expert interviews and hire the best talent.</strong></p>
+        <div class="d-flex flex-column gap-4">
+          <div class="step anim">
+            <div class="step-num" style="background:#6C63FF">
+              <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            </div>
+            <div><h4 class="fw-bold mb-1" style="font-size:1rem">Post a Requirement</h4><p class="text-secondary mb-0" style="font-size:.9rem">Share role details, skills, and evaluation criteria.</p></div>
+          </div>
+          <div class="step anim">
+            <div class="step-num" style="background:#3b82f6">
+              <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            </div>
+            <div><h4 class="fw-bold mb-1" style="font-size:1rem">We Assign Expert Panel</h4><p class="text-secondary mb-0" style="font-size:.9rem">Our AI matches the best interviewers for your role.</p></div>
+          </div>
+          <div class="step anim">
+            <div class="step-num" style="background:#22c55e">
+              <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div><h4 class="fw-bold mb-1" style="font-size:1rem">Interview &amp; Evaluation</h4><p class="text-secondary mb-0" style="font-size:.9rem">Experts conduct interviews and provide feedback.</p></div>
+          </div>
+          <div class="step anim">
+            <div class="step-num" style="background:#f59e0b">
+              <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div><h4 class="fw-bold mb-1" style="font-size:1rem">Hire with Confidence</h4><p class="text-secondary mb-0" style="font-size:.9rem">Review insights and make data-driven decisions.</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-7">
+        <div class="ip-card anim">
+          <img src="interview panel.png" alt="Interview Panel">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AI REPORTS -->
+<section class="ai-section section-py">
+  <div class="section-px">
+    <div class="row align-items-center g-5">
+      <div class="col-lg-6">
+        <div class="laptop-wrap anim">
+          <img src="interview feedback.png" style="width:100%;height:auto;display:block;" alt="Interview Feedback">
+        </div>
+      </div>
+      <div class="col-lg-6 anim">
+        <h2 class="fw-bold mb-2" style="font-size:1.85rem;line-height:1.2">AI-Powered Interview<br>Analysis &amp; Reports</h2>
+        <p class="mb-4" style="color:#242526;font-size:1.15rem;line-height:1.75">Leverage AI insights to evaluate candidates better and improve hiring outcomes.</p>
+        <div>
+          <div class="ai-feat">
+            <div class="d-flex align-items-center gap-3">
+              <div class="ai-feat-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M4.22 4.22l2.12 2.12M17.66 17.66l2.12 2.12M2 12h3M19 12h3M4.22 19.78l2.12-2.12M17.66 6.34l2.12-2.12"/></svg></div>
+              <div><h4>AI-driven feedback summary</h4><p>Get smart analysis and insights.</p></div>
+            </div>
+            <span class="chevron">›</span>
+          </div>
+          <div class="ai-feat">
+            <div class="d-flex align-items-center gap-3">
+              <div class="ai-feat-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
+              <div><h4>Detailed scorecards</h4><p>Evaluate candidates across key competencies.</p></div>
+            </div>
+            <span class="chevron">›</span>
+          </div>
+          <div class="ai-feat">
+            <div class="d-flex align-items-center gap-3">
+              <div class="ai-feat-ic"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+              <div><h4>Bias-free evaluation</h4><p>Ensure a fair and inclusive hiring process.</p></div>
+            </div>
+            <span class="chevron">›</span>
+          </div>
+          <div class="ai-feat">
+            <div class="d-flex align-items-center gap-3">
+              <div class="ai-feat-ic"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+              <div><h4>Data-backed decision making</h4><p>Hire with confidence using actionable data.</p></div>
+            </div>
+            <span class="chevron">›</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS STRIP -->
+<div class="stats-strip">
+  <div class="stats-inner">
+    <div class="row g-0">
+      <div class="col-6 col-lg-3 stat-div">
+        <div class="stat-item">
+          <div class="stat-ic-wrap"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+          <div><div class="stat-val">300+</div><div class="stat-lbl">Expert Interviewers</div></div>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3 stat-div">
+        <div class="stat-item">
+          <div class="stat-ic-wrap"><svg viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></div>
+          <div><div class="stat-val">48 Hours</div><div class="stat-lbl">Average Turnaround</div></div>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3 stat-div">
+        <div class="stat-item">
+          <div class="stat-ic-wrap"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+          <div><div class="stat-val">95%</div><div class="stat-lbl">Client Satisfaction</div></div>
+        </div>
+      </div>
+      <div class="col-6 col-lg-3">
+        <div class="stat-item">
+          <div class="stat-ic-wrap"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></div>
+          <div><div class="stat-val">99%</div><div class="stat-lbl">Successful Interviews</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PRICING -->
+<section class="pricing-section section-py section-px text-center">
+  <h2 class="fw-bold mb-2" style="font-size:2rem">Flexible Plans for Every Hiring Need</h2>
+  <p class="text-secondary mb-4" style="font-size:1.15rem">Choose a plan that fits your team's hiring goals.</p>
+  <div class="d-inline-flex align-items-center gap-3 mb-5">
+    <span class="billing-lbl active" id="lbl-monthly">Billed Monthly</span>
+    <div class="billing-toggle" id="billing-toggle" onclick="toggleBilling()">
+      <div class="billing-knob"></div>
+    </div>
+    <span class="billing-lbl" id="lbl-annual">Billed Annually</span>
+    <span class="save-pill">Save 20%</span>
+  </div>
+  <div class="row g-4 align-items-stretch">
+    <div class="col-md-6 col-lg-4">
+      <div class="plan anim">
+        <div class="plan-name">Starter</div>
+        <div class="plan-desc">Perfect for small teams</div>
+        <div class="plan-price">$199 <span>/ interview</span></div>
+        <ul class="plan-feats">
+          <li>1–3 Interviews</li>
+          <li>Basic Reports</li>
+          <li>Email Support</li>
+          <li>3 Expert Interviewers</li>
+        </ul>
+        <button class="btn-plan">Get Started</button>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-4">
+      <div class="plan popular anim">
+        <div class="plan-badge">Most Popular</div>
+        <div class="plan-name">Standard</div>
+        <div class="plan-desc">Ideal for growing companies</div>
+        <div class="plan-price">$399 <span>/ interview</span></div>
+        <ul class="plan-feats">
+          <li>4–10 Interviews</li>
+          <li>Detailed Reports</li>
+          <li>Priority Support</li>
+          <li>5 Expert Interviewers</li>
+          <li>AI Insights</li>
+        </ul>
+        <button class="btn-plan">Get Started</button>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-4 mx-auto">
+      <div class="plan anim">
+        <div class="plan-name">Premium</div>
+        <div class="plan-desc">For large scale hiring</div>
+        <div class="plan-price">$699 <span>/ interview</span></div>
+        <ul class="plan-feats">
+          <li>Unlimited Interviews</li>
+          <li>Advanced Reports</li>
+          <li>Dedicated Support</li>
+          <li>10+ Expert Interviewers</li>
+          <li>AI Insights &amp; Analytics</li>
+        </ul>
+        <button class="btn-plan">Get Started</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BANNER -->
+<section class="cta-banner section-px pb-5">
+  <div class="cta-inner p-4 p-lg-5">
+    <div class="d-flex align-items-center justify-content-between flex-wrap gap-4">
+      <div class="d-flex align-items-center gap-4">
+        <div class="cta-icon-wrap flex-shrink-0">
+          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <div>
+          <h2 class="fw-bold mb-1" style="font-size:2rem;color:#111827;line-height:1.15">Ready to Build Your Expert<br>Interview Panel?</h2>
+          <p class="mb-0" style="color:#4b5563;font-size:.95rem;line-height:1.6">Hire expert panels in 24 hours and make smarter hiring decisions—faster than ever.</p>
+        </div>
+      </div>
+      <div class="d-flex align-items-center gap-3 flex-wrap">
+        <a href="#" class="btn-cta-primary">Hire Expert Panel <span>→</span></a>
+        <a href="#" class="btn-cta-outline">Talk to Sales</a>
+      </div>
+    </div>
+    <div class="dot-grid">
+      <span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span>
+      <span></span><span></span><span></span><span></span>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-5 section-px">
+  <div class="row g-4 mb-4">
+    <div class="col-lg-3 col-md-6">
+      <a href="#" class="navbar-brand mb-2">
+        <img src="logo.png" alt="FlexWork" style="height:56px;width:auto;">
+      </a>
+      <div class="d-flex gap-2 mt-2">
+        <a href="#" class="soc" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        <a href="#" class="soc" aria-label="Twitter"><svg viewBox="0 0 24 24"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg></a>
+        <a href="#" class="soc" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+        <a href="#" class="soc" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+      </div>
+    </div>
+    <div class="col-lg-2 col-md-6 col-6 foot-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="col-lg-2 col-md-6 col-6 foot-col">
+      <h4>Resources</h4>
+      <ul>
+        <li><a href="#">Help Center</a></li>
+        <li><a href="#">Guides</a></li>
+        <li><a href="#">Webinars</a></li>
+        <li><a href="#">Success Stories</a></li>
+      </ul>
+    </div>
+    <div class="col-lg-2 col-md-6 col-6 foot-col">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="#">Terms of Service</a></li>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Cookie Policy</a></li>
+      </ul>
+    </div>
+    <div class="col-lg-3 col-md-6 foot-col">
+      <h4>Subscribe to our newsletter</h4>
+      <div class="nl-form">
+        <input class="nl-input" type="email" placeholder="Enter your email">
+        <button class="nl-btn">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="foot-bottom pt-3 text-center">© 2024 FlexWork. All rights reserved.</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+function toggleBilling() {
+  const t = document.getElementById('billing-toggle');
+  const lm = document.getElementById('lbl-monthly');
+  const la = document.getElementById('lbl-annual');
+  t.classList.toggle('on');
+  if (t.classList.contains('on')) {
+    lm.classList.remove('active'); la.classList.add('active');
+  } else {
+    lm.classList.add('active'); la.classList.remove('active');
+  }
+}
+
+const obs = new IntersectionObserver((entries) => {
+  entries.forEach((e, i) => {
+    if (e.isIntersecting) {
+      setTimeout(() => e.target.classList.add('vis'), i * 80);
+    }
+  });
+}, { threshold: 0.1 });
+document.querySelectorAll('.anim').forEach(el => obs.observe(el));
+</script>
+</body>
+</html>
