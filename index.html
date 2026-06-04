@@ -1,3 +1,4 @@
+'HTMLEOF'
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -100,18 +101,80 @@ h1, h2, h3, h4, h5 { font-family: 'Plus Jakarta Sans', sans-serif; }
 .step { display: flex; gap: 14px; align-items: flex-start; }
 .step-num { width: 34px; height: 34px; border-radius: 9px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; }
 .step-num i { font-size: 16px; color: #fff; }
-.ip-card { border-radius: 16px; overflow: hidden; }
-.ip-card img { width: 100%; height: auto; display: block; border-radius: 12px; }
+
+.ip-card {
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+#howItWorksCarousel,
+#aiCarousel {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+#howItWorksCarousel .carousel-inner,
+#aiCarousel .carousel-inner {
+  height: clamp(340px, 45vw, 560px);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+#howItWorksCarousel .carousel-item,
+#aiCarousel .carousel-item {
+  height: 100%;
+}
+
+#howItWorksCarousel .carousel-item img,
+#aiCarousel .carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+}
+
 .ai-section { background: var(--bg); }
 .laptop-wrap { filter: drop-shadow(0 16px 40px rgba(0,0,0,.18)); }
 .ai-section p[style*="1.15rem"] { color: #1f2937 !important; font-size: 1.2rem !important; font-weight: 500; }
-.ai-feat p { font-size: 1rem; color: #2d3748 !important; margin: 0; line-height: 1.55; }
-.ai-feat { display: flex; align-items: center; justify-content: space-between; padding: 13px 16px; border: 1px solid #e5e7eb; border-radius: 12px; transition: all .2s; cursor: pointer; background: #fff; margin-bottom: 10px; }
-.ai-feat:hover { box-shadow: 0 2px 12px rgba(108,99,255,.12); border-color: rgba(108,99,255,.3); }
-.ai-feat-ic { width: 36px; height: 36px; border-radius: 9px; background: rgba(108,99,255,.1); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-.ai-feat-ic i { font-size: 16px; color: var(--brand); }
-.ai-feat h4 { font-size: 1.05rem; font-weight: 700; margin-bottom: 2px; color: #111; }
-.chevron { color: #2b2929; font-size: 3rem; font-weight: 800; line-height: 1; }
+.ai-feat p { font-size: 1rem; color: #2d3748 !important; margin: 0; line-height: 1.55; transition: color .3s; }
+
+/* ── AI FEAT CARDS – updated with yellow hover ── */
+.ai-feat {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 13px 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  transition: all .3s cubic-bezier(.22,1,.36,1);
+  cursor: pointer;
+  background: #fff;
+  margin-bottom: 10px;
+}
+.ai-feat:hover {
+  background: #ffcd00;
+  border-color: #ffcd00;
+  box-shadow: 0 12px 40px rgba(255,205,0,.4);
+  transform: translateX(6px) translateY(-3px);
+}
+.ai-feat:hover p,
+.ai-feat:hover h4,
+.ai-feat:hover .chevron {
+  color: #111 !important;
+}
+.ai-feat:hover .ai-feat-ic {
+  background: rgba(0,0,0,.12);
+}
+.ai-feat:hover .ai-feat-ic i {
+  color: #111;
+}
+/* ── END AI FEAT CARDS ── */
+
+.ai-feat-ic { width: 36px; height: 36px; border-radius: 9px; background: rgba(108,99,255,.1); display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: background .3s; }
+.ai-feat-ic i { font-size: 16px; color: var(--brand); transition: color .3s; }
+.ai-feat h4 { font-size: 1.05rem; font-weight: 700; margin-bottom: 2px; color: #111; transition: color .3s; }
+.chevron { color: #2b2929; font-size: 3rem; font-weight: 800; line-height: 1; transition: color .3s; }
 .stats-strip { background: #eef0ff; padding: 20px 48px; }
 .stats-inner { background: var(--brand); border-radius: 16px; overflow: hidden; }
 .stat-div { position: relative; }
@@ -171,7 +234,7 @@ h1, h2, h3, h4, h5 { font-family: 'Plus Jakarta Sans', sans-serif; }
 .plan.popular .plan-price span { color: #9ca3af; }
 .plan.popular .plan-feats li { color: #1f2937; }
 .plan.popular .plan-feats li::before { background-color: rgba(108,99,255,.1); background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236C63FF' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E"); }
-.plan.popular .btn-plan { background: #fff color: #fff; border-color: transparent; box-shadow: 0 3px 12px rgba(123,125,252,.3); }
+.plan.popular .btn-plan { background: #fff; color: var(--brand); border-color: transparent; box-shadow: 0 3px 12px rgba(123,125,252,.3); }
 .cta-banner { background: var(--bg); }
 .cta-inner { background: #f4f6ff; border-radius: 24px; border: 1px solid #dcdceb; box-shadow: 0 10px 25px -5px rgba(0,0,0,.1), 0 8px 10px -6px rgba(0,0,0,.1); position: relative; overflow: hidden; }
 .cta-icon-wrap { width: 72px; height: 72px; min-width: 72px; border-radius: 50%; background: linear-gradient(135deg, #8d82ff, #7b7dfc); display: flex; align-items: center; justify-content: center; }
@@ -250,6 +313,10 @@ footer { background: #fff; border-top: 1px solid #f0f0f8; }
   .btn-cta-primary, .btn-cta-outline { width: 100%; justify-content: center; }
   .dot-grid { display: none; }
   footer .row { row-gap: 2rem; }
+  #howItWorksCarousel .carousel-inner,
+  #aiCarousel .carousel-inner {
+    height: clamp(200px, 55vw, 340px);
+  }
 }
 
 /* ANIMATIONS */
@@ -270,8 +337,10 @@ footer { background: #fff; border-top: 1px solid #f0f0f8; }
 .step { transition: transform .2s ease; }
 .step:hover { transform: translateX(4px); }
 .step:hover .step-num { animation: stepRing .65s ease-out; }
-.ai-feat { transition: transform .25s cubic-bezier(.34,1.28,.64,1), box-shadow .25s ease, border-color .25s ease; }
-.ai-feat:hover { transform: translateX(6px); }
+/* ── AI FEAT animation updated ── */
+.ai-feat { transition: transform .3s cubic-bezier(.22,1,.36,1), box-shadow .3s ease, border-color .3s ease, background .3s ease; }
+.ai-feat:hover { transform: translateX(6px) translateY(-3px); }
+/* ── END ── */
 @keyframes statShimmer { 0% { background-position: -200% center; } 100% { background-position: 200% center; } }
 .stat-val { background: linear-gradient(90deg, #fff 30%, rgba(255,255,255,.55) 50%, #fff 70%); background-size: 200% auto; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; animation: statShimmer 3s linear infinite; }
 .plan { transition: background .3s, border-color .3s, box-shadow .35s, transform .3s cubic-bezier(.22,1,.36,1); }
@@ -343,27 +412,18 @@ footer .col-lg-3.anim.vis .soc:nth-child(4) { opacity:1; transform:scale(1); tra
 </head>
 <body>
 
-<!-- ═══════════════════ NAVBAR ═══════════════════ -->
+<!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg sticky-top">
   <div class="container-fluid px-0">
-
     <div class="mobile-left">
       <a href="#" class="navbar-brand ms-0">
         <img src="logo.png" alt="FlexWork">
       </a>
-      <button class="navbar-toggler border-0"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#mainNav"
-              aria-controls="mainNav"
-              aria-expanded="false">
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false">
         <span class="navbar-toggler-icon"></span>
       </button>
     </div>
-
-    <!-- Mobile CTA -->
     <a href="#" class="btn-nav-cta mobile-cta">Hire Expert Panel</a>
-
     <div class="collapse navbar-collapse" id="mainNav">
       <ul class="navbar-nav mx-auto gap-lg-3">
         <li class="nav-item"><a href="#" class="nav-link">Find Work</a></li>
@@ -372,21 +432,18 @@ footer .col-lg-3.anim.vis .soc:nth-child(4) { opacity:1; transform:scale(1); tra
         <li class="nav-item"><a href="#" class="nav-link">Resources</a></li>
         <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
       </ul>
-      <!-- Desktop actions -->
       <div class="d-flex align-items-center gap-2 desktop-actions">
         <button class="btn-login">Log In</button>
         <a href="#" class="btn-nav-cta">Hire Expert Panel</a>
       </div>
-      <!-- Mobile login -->
       <div class="mobile-login">
         <button class="btn-login">Log In</button>
       </div>
     </div>
-
   </div>
 </nav>
 
-<!-- ═══════════════════ HERO ═══════════════════ -->
+<!-- HERO -->
 <section class="hero-section">
   <div class="hero-inner">
     <div class="row align-items-center g-4">
@@ -418,7 +475,7 @@ footer .col-lg-3.anim.vis .soc:nth-child(4) { opacity:1; transform:scale(1); tra
   </div>
 </section>
 
-<!-- ═══════════════════ TRUSTED / FEATURES ═══════════════════ -->
+<!-- TRUSTED / FEATURES -->
 <section class="trusted-section section-py section-px">
   <div class="trusted-dot-grid">
     <span></span><span></span><span></span><span></span><span></span><span></span>
@@ -456,7 +513,7 @@ footer .col-lg-3.anim.vis .soc:nth-child(4) { opacity:1; transform:scale(1); tra
   </div>
 </section>
 
-<!-- ═══════════════════ HOW IT WORKS ═══════════════════ -->
+<!-- HOW IT WORKS -->
 <section class="hiw-section section-py">
   <div class="section-px">
     <div class="row align-items-center g-5">
@@ -497,7 +554,7 @@ footer .col-lg-3.anim.vis .soc:nth-child(4) { opacity:1; transform:scale(1); tra
   </div>
 </section>
 
-<!-- ═══════════════════ AI SECTION ═══════════════════ -->
+<!-- AI SECTION -->
 <section class="ai-section section-py">
   <div class="section-px">
     <div class="row align-items-center g-5">
@@ -552,7 +609,7 @@ footer .col-lg-3.anim.vis .soc:nth-child(4) { opacity:1; transform:scale(1); tra
   </div>
 </section>
 
-<!-- ═══════════════════ STATS STRIP ═══════════════════ -->
+<!-- STATS STRIP -->
 <div class="stats-strip">
   <div class="stats-inner">
     <div class="row g-0">
@@ -584,7 +641,7 @@ footer .col-lg-3.anim.vis .soc:nth-child(4) { opacity:1; transform:scale(1); tra
   </div>
 </div>
 
-<!-- ═══════════════════ PRICING ═══════════════════ -->
+<!-- PRICING -->
 <section class="pricing-section section-py section-px text-center">
   <h2 class="fw-bold mb-2 anim" style="font-size:2rem">Flexible Plans for Every Hiring Need</h2>
   <p class="text-secondary mb-4 anim">Choose a plan that fits your team's hiring goals.</p>
@@ -605,7 +662,7 @@ footer .col-lg-3.anim.vis .soc:nth-child(4) { opacity:1; transform:scale(1); tra
           <li>Basic Reports</li>
           <li>Email Support</li>
           <li>3 Expert Interviewers</li>
-           <li>Basic Candidate Insights</li>
+          <li>Basic Candidate Insights</li>
         </ul>
         <button class="btn-plan">Get Started</button>
       </div>
@@ -644,7 +701,7 @@ footer .col-lg-3.anim.vis .soc:nth-child(4) { opacity:1; transform:scale(1); tra
   </div>
 </section>
 
-<!-- ═══════════════════ CTA BANNER ═══════════════════ -->
+<!-- CTA BANNER -->
 <section class="cta-banner section-px pb-5">
   <div class="cta-inner p-4 p-lg-5 anim">
     <div class="d-flex align-items-center justify-content-between flex-wrap gap-4">
@@ -669,24 +726,16 @@ footer .col-lg-3.anim.vis .soc:nth-child(4) { opacity:1; transform:scale(1); tra
   </div>
 </section>
 
-<!-- ═══════════════════ FOOTER ═══════════════════ -->
+<!-- FOOTER -->
 <footer class="py-5 section-px">
   <div class="row g-4 mb-4">
     <div class="col-lg-3 col-md-6 anim">
       <a href="#" class="navbar-brand mb-2"><img src="logo.png" alt="FlexWork" style="height:68px;width:auto;"></a>
       <div class="d-flex gap-2 mt-2">
-        <a href="https://www.linkedin.com/company/flexwork.in" target="_blank" rel="noopener noreferrer" class="soc" aria-label="LinkedIn">
-          <i class="bi bi-linkedin"></i>
-        </a>
-        <a href="https://x.com/flexwork_in" target="_blank" rel="noopener noreferrer" class="soc" aria-label="Twitter">
-          <i class="bi bi-twitter-x"></i>
-        </a>
-        <a href="https://www.facebook.com/flexwork.in" target="_blank" rel="noopener noreferrer" class="soc" aria-label="Facebook">
-          <i class="bi bi-facebook"></i>
-        </a>
-        <a href="https://www.instagram.com/flexwork_in/" target="_blank" rel="noopener noreferrer" class="soc" aria-label="Instagram">
-          <i class="bi bi-instagram"></i>
-        </a>
+        <a href="https://www.linkedin.com/company/flexwork.in" target="_blank" rel="noopener noreferrer" class="soc" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        <a href="https://x.com/flexwork_in" target="_blank" rel="noopener noreferrer" class="soc" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+        <a href="https://www.facebook.com/flexwork.in" target="_blank" rel="noopener noreferrer" class="soc" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/flexwork_in/" target="_blank" rel="noopener noreferrer" class="soc" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
       </div>
     </div>
     <div class="col-lg-2 col-md-6 col-6 foot-col anim">
