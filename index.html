@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,262 +7,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-  tailwind.config = {
-    corePlugins: { preflight: false },
-    prefix: 'tw-',
-    theme: {
-      extend: {
-        colors: {
-          brand: '#7b7dfc',
-          'brand-dark': '#7c77e4',
-          accent: '#ffcd00',
-          muted: '#6b7280',
-          border: '#e5e7eb',
-          bg: '#FAFAFC',
-          green: '#22c55e',
-        },
-        fontFamily: {
-          jakarta: ['"Plus Jakarta Sans"', 'sans-serif'],
-          dm: ['"DM Sans"', 'sans-serif'],
-        },
-        borderRadius: {
-          r: '14px',
-        }
-      }
-    }
-  }
-</script>
 <style>
-:root {
-  --brand: #7b7dfc;
-  --brand-dark: #7c77e4;
-  --accent: #ffcd00;
-  --text: #0d0d1a;
-  --muted: #6b7280;
-  --border: #e5e7eb;
-  --bg:#FAFAFC;
-  --green: #22c55e;
-  --r: 14px;
-}
-body { font-family: 'DM Sans', sans-serif; color: #0d0d1a; background: #fff; }
-h1, h2, h3, h4, h5 { font-family: 'Plus Jakarta Sans', sans-serif; }
-.navbar { background: #fff; border-bottom: 1px solid var(--border); height: 80px; padding: 0 80px; }
-.navbar-brand img { height: 56px; width: auto; }
-.nav-link { color: #374151 !important; font-weight: 500; font-size: 1.05rem; transition: color .2s; }
-.nav-link:hover { color: var(--brand) !important; }
-.btn-login { background: none; border: none; font-family: 'DM Sans', sans-serif; font-size: 1rem; font-weight: 500; color: #374151; padding: 8px 16px; }
-.btn-nav-cta { background: var(--accent); color: #111 !important; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1rem; font-weight: 700; padding: 10px 22px; border-radius: 9px; text-decoration: none; transition: all .2s; }
-.btn-nav-cta:hover { background: #e09520; box-shadow: 0 4px 14px rgba(245,166,35,.4); }
-.hero-section { background: var(--bg); overflow: visible; }
-.hero-inner { padding: 60px 80px; }
-.hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(108,99,255,.1); color: var(--brand); font-size: 1rem; font-weight: 600; padding: 8px 16px; border-radius: 20px; margin-bottom: 24px; border: 1px solid rgba(108,99,255,.2); font-family: 'DM Sans', sans-serif; }
-.hero-badge-icon { width: 22px; height: 22px; background: rgba(108,99,255,.18); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.72rem; flex-shrink: 0; }
-.hero-h1 { font-size: 3rem; line-height: 1.1; font-weight: 800; margin-bottom: 18px; letter-spacing: -0.5px; color: #111; }
-.hero-h1 span { color: var(--brand); }
-.hero-sub { color: #1f2937; font-size: 1.3rem; margin-bottom: 32px; line-height: 1.72; font-weight: 500; }
-.btn-hero-primary { background: var(--brand); color: #fff !important; font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.9rem; font-weight: 700; padding: 14px 26px; border-radius: 10px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: all .2s; }
-.btn-hero-primary:hover { background: var(--brand-dark); box-shadow: 0 6px 20px rgba(108,99,255,.35); transform: translateY(-1px); }
-.btn-hero-secondary { background: #fff; color: #111 !important; border: 1.5px solid #d1d5db; font-family: 'DM Sans', sans-serif; font-size: 0.9rem; font-weight: 500; padding: 13px 24px; border-radius: 10px; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: all .2s; }
-.btn-hero-secondary:hover { border-color: var(--brand); color: var(--brand) !important; }
-.play-circle { width: 28px; height: 28px; border-radius: 50%; border: 1.5px solid #9ca3af; display: flex; align-items: center; justify-content: center; font-size: 0.6rem; }
-.social-proof { display: flex; align-items: center; gap: 12px; }
-.avatars { display: flex; align-items: center; }
-.av { width: 36px; height: 36px; border-radius: 50%; border: 2.5px solid #eef0ff; margin-left: -10px; object-fit: cover; }
-.av:first-child { margin-left: 0; }
-.social-txt { font-size: 0.85rem; color: #6b7280; }
-.social-txt strong { color: #111; font-weight: 600; }
-.dash-wrap { background: #fff; border-radius: 18px; box-shadow: 0 8px 48px rgba(108,99,255,.16), 0 0 0 1px rgba(108,99,255,.08); padding: 12px; width: 100%; animation: riseUp .8s cubic-bezier(.22,1,.36,1) both .2s; overflow: hidden; }
-.dash-wrap img { width: 100%; height: auto; display: block; border-radius: 8px; }
-@keyframes riseUp { from { opacity:0; transform: translateY(30px); } to { opacity:1; transform: translateY(0); } }
-.trusted-section { background: var(--bg); position: relative; overflow: hidden; }
-.trusted-dot-grid { position: absolute; top: 20px; left: 28px; display: grid; grid-template-columns: repeat(6,1fr); gap: 7px; opacity: .35; pointer-events: none; }
-.trusted-dot-grid span { width: 5px; height: 5px; border-radius: 50%; background: #6C63FF; display: block; }
-.trusted-section .text-secondary.fs-5 { color: #374151 !important; font-size: 1.25rem !important; font-weight: 500; }
-.feat-card { background: #fff; border: 1.5px solid #e2e4f0; border-radius: 16px; padding: 32px 28px; text-align: left; box-shadow: 0 2px 16px rgba(0,0,0,.06); transition: background .3s, border-color .3s, box-shadow .3s, transform .3s; height: 100%; }
-.feat-card:hover { background: #7b7dfc; border-color: #7b7dfc; box-shadow: 0 12px 40px rgba(123,125,252,.4); transform: translateY(-6px); }
-.feat-card p.text-secondary { color: #374151 !important; font-size: 1.05rem !important; line-height: 1.75; transition: color .3s; }
-.feat-card h3 { font-size: 1.15rem !important; color: #111; transition: color .3s; }
-.feat-card .feat-ic { transition: background .3s; }
-.feat-card:hover h3,
-.feat-card:hover h3.fw-bold { color: #fff !important; }
-.feat-card:hover p,
-.feat-card:hover p.text-secondary,
-.feat-card:hover [class*="text-"] { color: rgba(255,255,255,.92) !important; }
-.feat-card:hover .feat-ic { background: rgba(255,255,255,.25); }
-.feat-ic { width: 56px; height: 56px; border-radius: 50%; background: var(--brand); display: flex; align-items: center; justify-content: center; margin-bottom: 24px; }
-.feat-ic i { font-size: 22px; color: #fff; }
-.hiw-section { background: var(--bg); }
-.hiw-section p[style*="1.25rem"] { color: #1f2937 !important; font-size: 1.2rem; font-weight: 600; }
-.step p.text-secondary { color: #2d3748 !important; font-size: 1.05rem !important; line-height: 1.65; }
-.step h4 { font-size: 1.15rem !important; }
-.step { display: flex; gap: 14px; align-items: flex-start; }
-.step-num { width: 34px; height: 34px; border-radius: 9px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; }
-.step-num i { font-size: 16px; color: #fff; }
-
-.ip-card {
-  border-radius: 16px;
-  overflow: hidden;
-}
-
-#howItWorksCarousel,
-#aiCarousel {
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-#howItWorksCarousel .carousel-inner,
-#aiCarousel .carousel-inner {
-  height: clamp(340px, 45vw, 560px);
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-#howItWorksCarousel .carousel-item,
-#aiCarousel .carousel-item {
-  height: 100%;
-}
-
-#howItWorksCarousel .carousel-item img,
-#aiCarousel .carousel-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  object-position: center;
-  display: block;
-}
-
-.ai-section { background: var(--bg); }
-.laptop-wrap { filter: drop-shadow(0 16px 40px rgba(0,0,0,.18)); }
-.ai-section p[style*="1.15rem"] { color: #1f2937 !important; font-size: 1.2rem !important; font-weight: 500; }
-.ai-feat p { font-size: 1rem; color: #2d3748 !important; margin: 0; line-height: 1.55; transition: color .3s; }
-
-/* ── AI FEAT CARDS – updated with yellow hover ── */
-.ai-feat {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 13px 16px;
-  border: 1px solid #e5e7eb;
-  border-radius: 12px;
-  transition: all .3s cubic-bezier(.22,1,.36,1);
-  cursor: pointer;
-  background: #fff;
-  margin-bottom: 10px;
-}
-.ai-feat:hover {
-  background: #ffcd00;
-  border-color: #ffcd00;
-  box-shadow: 0 12px 40px rgba(255,205,0,.4);
-  transform: translateX(6px) translateY(-3px);
-}
-.ai-feat:hover p,
-.ai-feat:hover h4,
-.ai-feat:hover .chevron {
-  color: #111 !important;
-}
-.ai-feat:hover .ai-feat-ic {
-  background: rgba(0,0,0,.12);
-}
-.ai-feat:hover .ai-feat-ic i {
-  color: #111;
-}
-/* ── END AI FEAT CARDS ── */
-
-.ai-feat-ic { width: 36px; height: 36px; border-radius: 9px; background: rgba(108,99,255,.1); display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: background .3s; }
-.ai-feat-ic i { font-size: 16px; color: var(--brand); transition: color .3s; }
-.ai-feat h4 { font-size: 1.05rem; font-weight: 700; margin-bottom: 2px; color: #111; transition: color .3s; }
-.chevron { color: #2b2929; font-size: 3rem; font-weight: 800; line-height: 1; transition: color .3s; }
-.stats-strip { background: #eef0ff; padding: 20px 48px; }
-.stats-inner { background: var(--brand); border-radius: 16px; overflow: hidden; }
-.stat-div { position: relative; }
-.stat-div:not(:last-child)::after { content: ''; position: absolute; right: 0; top: 18%; height: 64%; width: 1px; background: rgba(255,255,255,.22); }
-.stat-item { display: flex; align-items: center; gap: 14px; color: #fff; padding: 26px 28px; }
-.stat-ic-wrap { width: 44px; height: 44px; border-radius: 10px; background: rgba(255,255,255,.15); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-.stat-ic-wrap i { font-size: 20px; color: #fff; }
-.stat-val { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 1.55rem; line-height: 1.1; margin-bottom: 2px; }
-.stat-lbl { font-size: 0.75rem; opacity: .75; line-height: 1.3; }
-.pricing-section { background: var(--bg); overflow: visible; }
-.pricing-section p.text-secondary { color: #374151 !important; font-size: 1.25rem !important; font-weight: 500; }
-.billing-lbl { font-weight: 500; color: #6b7280; font-size: 0.85rem; display: flex; align-items: center; gap: 7px; }
-.billing-lbl.active { color: #111; font-weight: 700; }
-.billing-toggle { width: 42px; height: 24px; background: #d1d5db; border-radius: 12px; padding: 3px; cursor: pointer; transition: background .3s; display: flex; align-items: center; }
-.billing-toggle.on { background: var(--brand); }
-.billing-knob { width: 18px; height: 18px; background: #fff; border-radius: 50%; transition: transform .3s; box-shadow: 0 1px 4px rgba(0,0,0,.25); }
-.billing-toggle.on .billing-knob { transform: translateX(18px); }
-.save-pill { background: #d1fae5; color: #059669; font-size: 0.72rem; font-weight: 700; padding: 4px 12px; border-radius: 20px; }
-.pricing-section .row.g-4 { overflow: visible; padding-bottom: 16px; }
-.trusted-section .row.g-4 { overflow: visible; padding-bottom: 16px; }
-.trusted-section [class*="col-"] { transition: transform .3s cubic-bezier(.22,1,.36,1); }
-.trusted-section [class*="col-"]:hover { transform: translateY(-8px); }
-.pricing-section [class*="col-"]:hover { transform: translateY(-8px); }
-.pricing-section [class*="col-"] { transition: transform .3s cubic-bezier(.22,1,.36,1); }
-.plan { background: #fff; border: 1.5px solid #e2e4f0; border-radius: 16px; padding: 32px 28px; text-align: left; position: relative; transition: background .3s, border-color .3s, box-shadow .35s; display: flex; flex-direction: column; height: 100%; }
-.plan:hover,
-.plan.popular:hover { background: #7b7dfc; border-color: #7b7dfc; box-shadow: 0 18px 48px rgba(123,125,252,.45); }
-.plan:hover .plan-name,
-.plan.popular:hover .plan-name { color: #fff !important; }
-.plan:hover .plan-desc,
-.plan.popular:hover .plan-desc { color: rgba(255,255,255,.85) !important; }
-.plan:hover .plan-price,
-.plan.popular:hover .plan-price { color: #fff !important; }
-.plan:hover .plan-price span,
-.plan.popular:hover .plan-price span { color: rgba(255,255,255,.7) !important; }
-.plan:hover .plan-feats li,
-.plan.popular:hover .plan-feats li { color: rgba(255,255,255,.92) !important; }
-.plan:hover .plan-feats li::before,
-.plan.popular:hover .plan-feats li::before { background-color: rgba(255,255,255,.2); background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E"); }
-.plan:hover .btn-plan,
-.plan.popular:hover .btn-plan { background: #fff; color: #7b7dfc; border-color: transparent; box-shadow: none; }
-.plan:hover .plan-badge,
-.plan.popular:hover .plan-badge { background: rgba(255,255,255,.25); color: #fff; }
-.plan.popular { background: #fff; border: 1.5px solid #e2e4f0; color: #111; box-shadow: none; z-index: 2; }
-.plan-badge { position: absolute; top: 22px; right: 20px; background: rgba(123,125,252,.12); color: #7b7dfc; font-weight: 600; font-size: 0.63rem; padding: 5px 12px; border-radius: 8px; transition: background .3s, color .3s; }
-.plan-name { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 1.2rem; margin-bottom: 4px; color: #111; transition: color .3s; }
-.plan-desc { font-size: 0.82rem; color: #6b7280; margin-bottom: 20px; line-height: 1.5; transition: color .3s; }
-.plan-price { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 2.2rem; margin-bottom: 20px; color: #111; line-height: 1; display: flex; align-items: baseline; gap: 6px; transition: color .3s; }
-.plan-price span { font-size: 0.82rem; font-weight: 400; color: #9ca3af; transition: color .3s; }
-.plan-feats { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 11px; margin: 0 0 28px; font-size: 0.85rem; flex-grow: 1; }
-.plan-feats li { display: flex; align-items: center; gap: 10px; color: #1f2937; transition: color .3s; }
-.plan-feats li::before { content: ''; width: 18px; height: 18px; border-radius: 50%; flex-shrink: 0; background-color: rgba(108,99,255,.1); background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236C63FF' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: center; background-size: 10px; }
-.btn-plan { margin-top: auto; width: 100%; padding: 14px; border-radius: 10px; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 0.88rem; cursor: pointer; transition: all .3s; border: 1.5px solid #d1d5db; background: #fff; color: var(--brand); }
-.plan.popular .plan-name { color: #111; }
-.plan.popular .plan-desc { color: #6b7280; }
-.plan.popular .plan-price { color: #111; }
-.plan.popular .plan-price span { color: #9ca3af; }
-.plan.popular .plan-feats li { color: #1f2937; }
-.plan.popular .plan-feats li::before { background-color: rgba(108,99,255,.1); background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236C63FF' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E"); }
-.plan.popular .btn-plan { background: #fff; color: var(--brand); border-color: transparent; box-shadow: 0 3px 12px rgba(123,125,252,.3); }
-.cta-banner { background: var(--bg); }
-.cta-inner { background: #f4f6ff; border-radius: 24px; border: 1px solid #dcdceb; box-shadow: 0 10px 25px -5px rgba(0,0,0,.1), 0 8px 10px -6px rgba(0,0,0,.1); position: relative; overflow: hidden; }
-.cta-icon-wrap { width: 72px; height: 72px; min-width: 72px; border-radius: 50%; background: linear-gradient(135deg, #8d82ff, #7b7dfc); display: flex; align-items: center; justify-content: center; }
-.cta-icon-wrap i { font-size: 30px; color: #fff; }
-.cta-inner p[style*="4b5563"] { color: #374151 !important; font-size: 1rem !important; font-weight: 500; }
-.btn-cta-primary { background: #ffcd00; color: #111827 !important; border: none; padding: 15px 34px; border-radius: 12px; font-weight: 700; font-size: 0.92rem; text-decoration: none; display: inline-flex; align-items: center; gap: 16px; box-shadow: 0 6px 18px rgba(255,205,0,.28); transition: .25s ease; white-space: nowrap; }
-.btn-cta-primary:hover { transform: translateY(-1px); }
-.btn-cta-outline { background: #fff; color: #111827 !important; border: 1.5px solid #d8dbe5; padding: 14px 32px; border-radius: 12px; font-weight: 700; font-size: 0.92rem; text-decoration: none; transition: .25s ease; white-space: nowrap; }
-.dot-grid { position: absolute; right: 28px; top: 50%; transform: translateY(-50%); width: 74px; display: grid; grid-template-columns: repeat(4,1fr); gap: 14px; opacity: .45; }
-.dot-grid span { width: 6px; height: 6px; border-radius: 50%; background: #c7c9d8; }
-footer { background: #fff; border-top: 1px solid #f0f0f8; }
-.navbar-brand img { height: 90px !important; width: auto; }
-.foot-tag { font-size: 1rem; color: #9ca3af; margin-bottom: 22px; line-height: 1.6; }
-.soc { width: 42px; height: 42px; border: 1px solid #e5e7eb; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #6b7280; text-decoration: none; transition: all .2s; }
-.soc i { font-size: 18px; }
-.foot-col h4 { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 1.1rem; margin-bottom: 18px; color: #111; }
-.foot-col ul { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 14px; }
-.foot-col ul a { text-decoration: none; color: #6b7280; font-size: 0.95rem; transition: color .2s; }
-.foot-col ul a:hover { color: var(--brand); }
-.nl-form { display: flex; border: 1.5px solid #e5e7eb; border-radius: 12px; overflow: hidden; margin-top: 12px; }
-.nl-input { flex: 1; padding: 14px 16px; border: none; outline: none; font-family: 'DM Sans', sans-serif; font-size: 0.95rem; color: #111; }
-.nl-btn { background: var(--accent); border: none; padding: 14px 20px; cursor: pointer; color: #fff; transition: background .2s; }
-.nl-btn i { font-size: 16px; }
-.foot-bottom { border-top: 1px solid #f0f0f8; font-size: 0.95rem; color: #9ca3af; padding-top: 1.25rem; }
-.anim { opacity: 0; transform: translateY(22px); transition: opacity .55s ease, transform .55s ease; }
-.anim.vis { opacity: 1; transform: translateY(0); }
-.section-py { padding-top: 56px; padding-bottom: 56px; }
-.section-px { padding-left: 80px; padding-right: 80px; }
-
 @media (max-width: 991px) {
   .section-px { padding-left: 48px; padding-right: 48px; }
   .navbar { padding: 0 48px; }
@@ -274,11 +18,8 @@ footer { background: #fff; border-top: 1px solid #f0f0f8; }
   .stats-strip { padding: 20px; }
   .stat-item { padding: 18px; }
   .stat-val { font-size: 1.3rem; }
-  .cta-inner .d-flex.justify-content-between { flex-direction: column; align-items: flex-start !important; }
-}
-
+  .cta-inner .d-flex.justify-content-between { flex-direction: column; align-items: flex-start !important; }}
 .mobile-cta, .mobile-login { display: none !important; }
-
 @media (max-width: 920px) {
   .section-px { padding-left: 24px; padding-right: 24px; }
   .navbar { padding: 0 24px; height: auto; min-height: 80px; }
@@ -312,14 +53,9 @@ footer { background: #fff; border-top: 1px solid #f0f0f8; }
   .cta-icon-wrap i { font-size: 24px; }
   .btn-cta-primary, .btn-cta-outline { width: 100%; justify-content: center; }
   .dot-grid { display: none; }
-  footer .row { row-gap: 2rem; }
-  #howItWorksCarousel .carousel-inner,
-  #aiCarousel .carousel-inner {
+  footer .row { row-gap: 2rem; }#howItWorksCarousel .carousel-inner,#aiCarousel .carousel-inner {
     height: clamp(200px, 55vw, 340px);
-  }
-}
-
-/* ANIMATIONS */
+  }}
 @keyframes navSlideDown { from { opacity:0; transform:translateY(-100%); } to { opacity:1; transform:translateY(0); } }
 .navbar { animation: navSlideDown .5s cubic-bezier(.22,1,.36,1) both; }
 @keyframes badgePop { from { opacity:0; transform:scale(.85) translateY(-8px); } to { opacity:1; transform:scale(1) translateY(0); } }
@@ -337,10 +73,8 @@ footer { background: #fff; border-top: 1px solid #f0f0f8; }
 .step { transition: transform .2s ease; }
 .step:hover { transform: translateX(4px); }
 .step:hover .step-num { animation: stepRing .65s ease-out; }
-/* ── AI FEAT animation updated ── */
 .ai-feat { transition: transform .3s cubic-bezier(.22,1,.36,1), box-shadow .3s ease, border-color .3s ease, background .3s ease; }
 .ai-feat:hover { transform: translateX(6px) translateY(-3px); }
-/* ── END ── */
 @keyframes statShimmer { 0% { background-position: -200% center; } 100% { background-position: 200% center; } }
 .stat-val { background: linear-gradient(90deg, #fff 30%, rgba(255,255,255,.55) 50%, #fff 70%); background-size: 200% auto; -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; animation: statShimmer 3s linear infinite; }
 .plan { transition: background .3s, border-color .3s, box-shadow .35s, transform .3s cubic-bezier(.22,1,.36,1); }
@@ -350,7 +84,7 @@ footer { background: #fff; border-top: 1px solid #f0f0f8; }
 .btn-cta-outline { transition: all .25s ease, box-shadow .25s ease; }
 .btn-cta-outline:hover { border-color: var(--brand); color: var(--brand) !important; box-shadow: 0 4px 14px rgba(108,99,255,.18); }
 .soc { transition: all .25s cubic-bezier(.34,1.56,.64,1); }
-.soc:hover { transform: scale(1.18) translateY(-2px); border-color: var(--brand); color: var(--brand); }
+.soc:hover {transform: scale(1.18) translateY(-2px);border-color: var(--brand);color: var(--brand);}
 .nav-link { position:relative; }
 .nav-link::after { content:''; position:absolute; left:0; bottom:-3px; width:0; height:2px; background:var(--brand); transition:width .3s ease; border-radius:2px; }
 .nav-link:hover::after { width:100%; }
@@ -404,396 +138,474 @@ footer .foot-bottom.anim { transition-delay: 0.5s; }
 footer .col-lg-3.anim { transform: translateY(20px); }
 footer .col-lg-3.anim.vis { transform: translateY(0); }
 .soc { opacity: 0; transform: scale(0.7); transition: opacity .3s ease, transform .3s cubic-bezier(.34,1.56,.64,1), border-color .25s, color .25s; }
-footer .col-lg-3.anim.vis .soc:nth-child(1) { opacity:1; transform:scale(1); transition-delay:.3s; }
-footer .col-lg-3.anim.vis .soc:nth-child(2) { opacity:1; transform:scale(1); transition-delay:.4s; }
-footer .col-lg-3.anim.vis .soc:nth-child(3) { opacity:1; transform:scale(1); transition-delay:.5s; }
-footer .col-lg-3.anim.vis .soc:nth-child(4) { opacity:1; transform:scale(1); transition-delay:.6s; }
+footer .col-lg-3.anim.vis .soc:nth-child(1) { opacity:1; transition-delay:.35s;}
+footer .col-lg-3.anim.vis .soc:nth-child(2) { opacity:1; transition-delay:.45s;}
+footer .col-lg-3.anim.vis .soc:nth-child(3) { opacity:1; transition-delay:.55s;}
+footer .col-lg-3.anim.vis .soc:nth-child(4) {opacity:1;transition-delay:.65s;}
+footer .col-lg-3.anim.vis .soc:nth-child(1),
+footer .col-lg-3.anim.vis .soc:nth-child(2),
+footer .col-lg-3.anim.vis .soc:nth-child(3),
+footer .col-lg-3.anim.vis .soc:nth-child(4) { transform: scale(1); }
+footer .col-lg-3.anim.vis .soc:hover { transform: scale(1.18) translateY(-2px) !important; border-color: var(--brand) !important; color: var(--brand) !important; }
+:root { --brand: #7b7dfc; }
+@keyframes riseUp {
+   from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }}
+.anim { opacity: 0;transform: translateY(22px);transition: opacity .55s cubic-bezier(.22,1,.36,1), transform .55s cubic-bezier(.22,1,.36,1);}
+.anim.vis { opacity: 1; transform: translateY(0); }
+#howItWorksCarousel.anim { opacity:0; transform:translateX(60px); transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1); }
+#howItWorksCarousel.anim.vis { opacity:1; transform:translateX(0); }
+.laptop-wrap.anim { opacity:0; transform:translateX(-60px); transition:opacity .7s cubic-bezier(.22,1,.36,1),transform .7s cubic-bezier(.22,1,.36,1); }
+.laptop-wrap.anim.vis { opacity:1; transform:translateX(0); }
+.btn-shimmer { position: relative; overflow: hidden; }
+.btn-shimmer::after {content: ''; position: absolute; top: 0; left: -100%;width: 60%; height: 100%;background: linear-gradient(120deg, transparent 0%, rgba(255,255,255,.35) 50%, transparent 100%);transform: skewX(-20deg);animation: shimmerSlide 3.5s ease-in-out infinite;}
+@keyframes ripple { to { transform: scale(3.5); opacity: 0; } }
+.btn-ripple { position: relative; overflow: hidden; }
+.btn-ripple .ripple-circle {position: absolute; border-radius: 50%; background: rgba(255,255,255,.45); pointer-events: none;transform: scale(0);animation: ripple .55s linear;}
+.btn-hero-primary, .btn-hero-secondary, .btn-nav-cta,
+.btn-cta-primary, .btn-cta-outline, .plan-btn, .nl-btn {transition: transform .22s cubic-bezier(.34,1.56,.64,1),box-shadow .22s ease, filter .2s ease !important;}
+.btn-hero-primary:hover {transform: translateY(-3px) scale(1.03) !important;box-shadow: 0 10px 28px rgba(123,125,252,.5) !important;filter: brightness(1.08);}
+.btn-nav-cta:hover {transform: translateY(-3px) scale(1.03) !important;box-shadow: 0 10px 28px rgba(255,205,0,.5) !important;}
+.btn-hero-secondary:hover {transform: translateY(-2px) scale(1.02) !important;box-shadow: 0 6px 18px rgba(0,0,0,.1) !important;border-color: var(--brand) !important;color: var(--brand) !important;}
+.btn-cta-primary:hover {transform: translateY(-3px) scale(1.03) !important;box-shadow: 0 10px 28px rgba(255,205,0,.55) !important;}
+.btn-cta-outline:hover {transform: translateY(-3px) scale(1.02) !important;border-color: var(--brand) !important;color: var(--brand) !important;box-shadow: 0 8px 24px rgba(108,99,255,.2) !important;}
+.plan-btn:hover {transform: translateY(-2px) scale(1.02) !important;box-shadow: 0 8px 20px rgba(0,0,0,.14) !important;}
+.nl-btn:hover { transform: scale(1.08) !important; filter: brightness(1.1); }
+.btn-hero-primary:active, .btn-nav-cta:active,
+.btn-cta-primary:active, .btn-cta-outline:active { transform: translateY(0) scale(0.97) !important;transition-duration: .08s !important;}
+.feat-card { transition: background .3s, border-color .3s, box-shadow .3s, transform .3s;}
+.feat-card:hover {background: var(--brand) !important;border-color: var(--brand) !important;box-shadow: 0 12px 40px rgba(123,125,252,.4) !important;transform: translateY(-6px);}
+.feat-card:hover h3, .feat-card:hover p { color: rgba(255,255,255,.92) !important; }
+.feat-card:hover .feat-ic { background: rgba(255,255,255,.25) !important;transform: scale(1.15);}
+.ai-feat {transition: background .3s, border-color .3s, box-shadow .3s, transform .3s cubic-bezier(.22,1,.36,1);}
+.ai-feat:hover {background: #ffcd00 !important;border-color: #ffcd00 !important;box-shadow: 0 12px 40px rgba(255,205,0,.4) !important;transform: translateX(6px) translateY(-3px);}
+.ai-feat:hover p, .ai-feat:hover h4, .ai-feat:hover .chevron { color: #111 !important; }
+.ai-feat:hover .ai-feat-ic { background: rgba(0,0,0,.12) !important; }
+.ai-feat:hover .ai-feat-ic i { color: #111 !important; }
+.plan-card {transition: background .3s, border-color .3s, box-shadow .35s,transform .3s cubic-bezier(.22,1,.36,1);}
+.plan-card:hover {background: var(--brand) !important;border-color: var(--brand) !important;box-shadow: 0 18px 48px rgba(123,125,252,.45) !important;transform: translateY(-8px) scale(1.02);}
+.plan-card:hover .plan-name, .plan-card:hover .plan-price,
+.plan-card:hover .plan-feat { color: #fff !important; }
+.plan-card:hover .plan-desc, .plan-card:hover .plan-per { color: rgba(255,255,255,.75) !important; }
+.plan-card:hover .plan-btn { background: #fff !important; color: var(--brand) !important; border-color: transparent !important; }
+.plan-card:hover .plan-badge { background: rgba(255,255,255,.25) !important; color: #fff !important; }
+.plan-card:hover .check-icon {background-color: rgba(255,255,255,.2) !important;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23ffffff' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E") !important;}
+@keyframes stepIconBounce {0%  { transform: scale(1); }35% { transform: scale(1.25) rotate(-8deg); }65% { transform: scale(.95) rotate(4deg); }100%{ transform: scale(1); }}
+.step-wrap {transition: transform .22s ease, background .2s ease !important;border-radius: 12px;padding: 8px 10px 8px 4px;margin-left: -4px;}
+.step-wrap:hover { transform: translateX(6px) !important; background: rgba(108,99,255,.05); }
+.step-wrap:hover .step-num { animation: stepIconBounce .45s cubic-bezier(.34,1.56,.64,1) both, stepRing .65s ease-out !important; }
+footer .foot-col h4, footer .col-lg-3 h4 { display: inline-block; }
+@keyframes footLineExpand { from { width: 0; } to { width: 100%; } }
+footer .foot-col.anim.vis h4::after,
+footer .col-lg-3.anim.vis h4::after {content: ''; display: block; height: 2px; width: 0; background: #111; border-radius: 2px; margin-top: 5px; animation: footLineExpand .5s cubic-bezier(.22,1,.36,1) forwards .3s;}
+footer .foot-col ul a {transition: color .2s ease, transform .2s ease !important;display: inline-block;}
+footer .foot-col ul a:hover { color: var(--brand) !important; transform: translateX(5px) !important; }
+.soc { opacity: 0; transform: scale(0.7); transition: opacity .3s ease, transform .3s cubic-bezier(.34,1.56,.64,1), border-color .25s, color .25s; }
+footer .col-lg-3.anim.vis .soc:nth-child(1) { opacity:1; transform:scale(1); transition-delay:.35s; }
+footer .col-lg-3.anim.vis .soc:nth-child(2) { opacity:1; transform:scale(1); transition-delay:.45s; }
+footer .col-lg-3.anim.vis .soc:nth-child(3) { opacity:1; transform:scale(1); transition-delay:.55s; }
+footer .col-lg-3.anim.vis .soc:nth-child(4) { opacity:1; transform:scale(1); transition-delay:.65s; }
+@media (max-width: 991px) 
+{section[style*="padding:56px 80px"],section[style*="padding:60px 80px"],section[style*="padding:0 80px"] 
+{  padding-left: 48px !important; padding-right: 48px !important;}.hero-inner { padding: 48px !important; } footer { padding-left: 48px !important; padding-right: 48px !important; }}
+@media (max-width: 920px) {
+section[style*="padding:56px 80px"],section[style*="padding:60px 80px"],section[style*="padding:0 80px"],section[style*="padding:0 80px 56px"] {
+padding-left: 24px !important;padding-right: 24px !important;}.hero-inner { padding: 40px 24px !important; }footer { padding-left: 24px !important; padding-right: 24px !important; }.stats-strip { padding: 16px 24px !important; }}
+@media (max-width: 480px) { section[style*="padding:56px 80px"], section[style*="padding:60px 80px"], section[style*="padding:0 80px"], section[style*="padding:0 80px 56px"] {
+padding-left: 16px !important;padding-right: 16px !important;}
+.hero-inner { padding: 32px 16px !important; }
+.hero-h1 { font-size: 1.65rem !important; line-height: 1.2; }
+.hero-sub { font-size: 0.95rem !important; }
+footer { padding-left: 16px !important; padding-right: 16px !important; }
+.stats-strip { padding: 12px 16px !important; }
+.cta-inner .d-flex.align-items-center.gap-3 { flex-direction: column; align-items: stretch !important; }
+.btn-cta-primary, .btn-cta-outline { width: 100%; justify-content: center; }}
 </style>
 </head>
-<body>
-
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg sticky-top">
-  <div class="container-fluid px-0">
-    <div class="mobile-left">
-      <a href="#" class="navbar-brand ms-0">
-        <img src="logo.png" alt="FlexWork">
-      </a>
-      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    </div>
-    <a href="#" class="btn-nav-cta mobile-cta">Hire Expert Panel</a>
+<body style="font-family:'DM Sans',sans-serif;color:#0d0d1a;background:#fff;margin:0;padding:0;">
+<nav class="navbar navbar-expand-lg sticky-top" style="background:#fff;border-bottom:1px solid #e5e7eb;height:80px;padding:0 80px;animation:navSlideDown .5s cubic-bezier(.22,1,.36,1) both;">
+  <div class="container-fluid px-0 d-flex align-items-center justify-content-between">
+    <a class="navbar-brand" href="#" style="margin:0;">
+      <img src="logo.png" alt="FlexWork" style="height:56px;width:auto;">
+    </a>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
     <div class="collapse navbar-collapse" id="mainNav">
       <ul class="navbar-nav mx-auto gap-lg-3">
-        <li class="nav-item"><a href="#" class="nav-link">Find Work</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">For Clients</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Community</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Resources</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
+        <li class="nav-item"><a href="#" class="nav-link" style="color:#374151;font-weight:500;font-size:1.1rem;">Find Work</a></li>
+        <li class="nav-item"><a href="#" class="nav-link" style="color:#374151;font-weight:500;font-size:1.1rem;">For Clients</a></li>
+        <li class="nav-item"><a href="#" class="nav-link" style="color:#374151;font-weight:500;font-size:1.1rem;">Community</a></li>
+        <li class="nav-item"><a href="#" class="nav-link" style="color:#374151;font-weight:500;font-size:1.1rem;">Resources</a></li>
+        <li class="nav-item"><a href="#" class="nav-link" style="color:#374151;font-weight:500;font-size:1.1rem;">Pricing</a></li>
       </ul>
-      <div class="d-flex align-items-center gap-2 desktop-actions">
-        <button class="btn-login">Log In</button>
-        <a href="#" class="btn-nav-cta">Hire Expert Panel</a>
+      <div class="desktop-actions d-flex align-items-center gap-2">
+        <button style="background:none;border:none;font-family:'DM Sans',sans-serif;font-size:1.05rem;font-weight:500;color:#374151;padding:8px 16px;cursor:pointer;">Log In</button>
+        <a href="#" class="btn-nav-cta btn-shimmer" style="background:#ffcd00;color:#111;font-family:'Plus Jakarta Sans',sans-serif;font-size:1.05rem;font-weight:700;padding:10px 22px;border-radius:9px;text-decoration:none;">Hire Expert Panel</a>
       </div>
+      <a href="#" class="mobile-cta btn-shimmer" style="background:#ffcd00;color:#111;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;border-radius:9px;text-decoration:none;align-items:center;">Hire Now</a>
       <div class="mobile-login">
-        <button class="btn-login">Log In</button>
+        <a href="#" class="btn-login" style="font-family:'DM Sans',sans-serif;font-size:1.05rem;font-weight:500;color:#374151;text-decoration:none;">Log In</a>
       </div>
     </div>
   </div>
 </nav>
-
-<!-- HERO -->
-<section class="hero-section">
-  <div class="hero-inner">
+<section class="hero-section" style="background:#FAFAFC;overflow:hidden;">
+  <div class="hero-inner" style="padding:60px 80px;">
     <div class="row align-items-center g-4">
       <div class="col-lg-6">
-        <div class="hero-badge">
-          <span class="hero-badge-icon">👤</span>Expert Interview Panels in 24 Hours
+        <div class="hero-badge d-inline-flex align-items-center gap-2 mb-3" style="background:rgba(108,99,255,.1);color:#7b7dfc;font-size:1.05rem;font-weight:600;padding:8px 16px;border-radius:20px;border:1px solid rgba(108,99,255,.2);font-family:'DM Sans',sans-serif;">
+          <span style="width:22px;height:22px;background:rgba(108,99,255,.18);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.72rem;flex-shrink:0;">👤</span>
+          Expert Interview Panels in 24 Hours
         </div>
-        <h1 class="hero-h1">Hire Expert Interview<br>Panels in <span>24 Hours</span></h1>
-        <p class="hero-sub">Stop internal burnout. Leverage pre-vetted industry experts for structured technical evaluations. Faster hiring, zero bias.</p>
+        <h1 class="hero-h1" style="font-family:'Plus Jakarta Sans',sans-serif;font-size:3.2rem;line-height:1.1;font-weight:800;margin-bottom:18px;letter-spacing:-0.5px;color:#111;">
+          Hire Expert Interview<br>Panels in <span style="color:#7b7dfc;">24 Hours</span>
+        </h1>
+        <p class="hero-sub" style="color:#1f2937;font-size:1.35rem;margin-bottom:32px;line-height:1.72;font-weight:500;">Stop internal burnout. Leverage pre-vetted industry experts for structured technical evaluations. Faster hiring, zero bias.</p>
         <div class="d-flex gap-3 align-items-center flex-wrap mb-4">
-          <a href="#" class="btn-hero-primary">Hire Expert Panel &nbsp;→</a>
-          <a href="#" class="btn-hero-secondary">
-            <span class="play-circle">▶</span> How It Works
+          <a href="#" class="btn-hero-primary btn-shimmer" style="background:#7b7dfc;color:#fff;font-family:'Plus Jakarta Sans',sans-serif;font-size:0.97rem;font-weight:700;padding:14px 26px;border-radius:10px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;">Hire Expert Panel &nbsp;→</a>
+          <a href="#" class="btn-hero-secondary" style="background:#fff;color:#111;border:1.5px solid #d1d5db;font-family:'DM Sans',sans-serif;font-size:0.97rem;font-weight:500;padding:13px 24px;border-radius:10px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;">
+            <span style="width:28px;height:28px;border-radius:50%;border:1.5px solid #9ca3af;display:flex;align-items:center;justify-content:center;font-size:0.6rem;">▶</span> How It Works
           </a>
         </div>
-        <div class="social-proof">
-          <div class="avatars">
-            <img class="av" src="https://randomuser.me/api/portraits/women/44.jpg" alt="User 1">
-            <img class="av" src="https://randomuser.me/api/portraits/men/32.jpg" alt="User 2">
-            <img class="av" src="https://randomuser.me/api/portraits/women/68.jpg" alt="User 3">
+        <div class="social-proof d-flex align-items-center gap-3">
+          <div class="d-flex align-items-center">
+            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="" style="width:36px;height:36px;border-radius:50%;border:2.5px solid #eef0ff;object-fit:cover;margin-left:0;">
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="" style="width:36px;height:36px;border-radius:50%;border:2.5px solid #eef0ff;object-fit:cover;margin-left:-10px;">
+            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="" style="width:36px;height:36px;border-radius:50%;border:2.5px solid #eef0ff;object-fit:cover;margin-left:-10px;">
           </div>
-          <span class="social-txt"><strong>Trusted by 500+</strong> companies worldwide</span>
+          <span style="font-size:0.92rem;color:#6b7280;"><strong style="color:#111;font-weight:600;">Trusted by 500+</strong> companies worldwide</span>
         </div>
       </div>
       <div class="col-lg-6">
-        <div class="dash-wrap"><img src="dashboard.png" alt="Dashboard"></div>
+        <div class="dash-wrap" style="background:#fff;border-radius:18px;box-shadow:0 8px 48px rgba(108,99,255,.16),0 0 0 1px rgba(108,99,255,.08);padding:12px;width:100%;">
+          <img src="dashboard.png" alt="Dashboard" style="width:100%;height:auto;display:block;border-radius:8px;">
+        </div>
       </div>
     </div>
   </div>
 </section>
-
-<!-- TRUSTED / FEATURES -->
-<section class="trusted-section section-py section-px">
-  <div class="trusted-dot-grid">
-    <span></span><span></span><span></span><span></span><span></span><span></span>
-    <span></span><span></span><span></span><span></span><span></span><span></span>
-    <span></span><span></span><span></span><span></span><span></span><span></span>
-    <span></span><span></span><span></span><span></span><span></span><span></span>
-    <span></span><span></span><span></span><span></span><span></span><span></span>
+<section style="background:#FAFAFC;padding:56px 80px;position:relative;overflow:hidden;">
+  <div class="dot-grid dot-grid-anim" style="position:absolute;top:20px;left:28px;display:grid;grid-template-columns:repeat(6,1fr);gap:7px;opacity:.35;pointer-events:none;">
+    <span style="width:5px;height:5px;border-radius:50%;background:#6C63FF;display:block;"></span><span style="width:5px;height:5px;border-radius:50%;background:#6C63FF;display:block;"></span><span style="width:5px;height:5px;border-radius:50%;background:#6C63FF;display:block;"></span><span style="width:5px;height:5px;border-radius:50%;background:#6C63FF;display:block;"></span><span style="width:5px;height:5px;border-radius:50%;background:#6C63FF;display:block;"></span><span style="width:5px;height:5px;border-radius:50%;background:#6C63FF;display:block;"></span>
+    <span style="width:5px;height:5px;border-radius:50%;background:#6C63FF;display:block;"></span><span style="width:5px;height:5px;border-radius:50%;background:#6C63FF;display:block;"></span><span style="width:5px;height:5px;border-radius:50%;background:#6C63FF;display:block;"></span><span style="width:5px;height:5px;border-radius:50%;background:#6C63FF;display:block;"></span><span style="width:5px;height:5px;border-radius:50%;background:#6C63FF;display:block;"></span><span style="width:5px;height:5px;border-radius:50%;background:#6C63FF;display:block;"></span>
+    <span style="width:5px;height:5px;border-radius:50%;background:#6C63FF;display:block;"></span><span style="width:5px;height:5px;border-radius:50%;background:#6C63FF;display:block;"></span><span style="width:5px;height:5px;border-radius:50%;background:#6C63FF;display:block;"></span><span style="width:5px;height:5px;border-radius:50%;background:#6C63FF;display:block;"></span><span style="width:5px;height:5px;border-radius:50%;background:#6C63FF;display:block;"></span><span style="width:5px;height:5px;border-radius:50%;background:#6C63FF;display:block;"></span>
   </div>
-  <div class="text-center mb-4">
-    <h2 class="fs-2 fw-bold mb-2 text-dark" style="font-size:2.2rem!important">Trusted by Top Companies</h2>
-    <p class="text-secondary fs-5">Helping businesses make confident hiring decisions with expert interview panels.</p>
+  <div class="text-center mb-4 anim">
+    <h2 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:2.4rem;font-weight:800;margin-bottom:8px;color:#111;">Trusted by Top Companies</h2>
+    <p style="color:#374151;font-size:1.3rem;font-weight:500;">Helping businesses make confident hiring decisions with expert interview panels.</p>
   </div>
   <div class="row g-4">
     <div class="col-md-6 col-lg-4">
-      <div class="feat-card anim">
-        <div class="feat-ic"><i class="bi bi-people-fill"></i></div>
-        <h3 class="fw-bold fs-6 mb-2">Expert-Led Interview Panels</h3>
-        <p class="text-secondary" style="line-height:1.75;margin:0">Our panels are curated from industry professionals with proven experience in technical and behavioral interviews.</p>
+      <div class="feat-card anim" style="background:#fff;border:1.5px solid #e2e4f0;border-radius:16px;padding:32px 28px;box-shadow:0 2px 16px rgba(0,0,0,.06);height:100%;">
+        <div class="feat-ic" style="width:56px;height:56px;border-radius:50%;background:#7b7dfc;display:flex;align-items:center;justify-content:center;margin-bottom:24px;"><i class="bi bi-people-fill" style="font-size:22px;color:#fff;"></i></div>
+        <h3 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:1.25rem;font-weight:800;color:#111;margin-bottom:8px;">Expert-Led Interview Panels</h3>
+        <p style="color:#374151;font-size:1.1rem;line-height:1.75;margin:0;">Our panels are curated from industry professionals with proven experience in technical and behavioral interviews.</p>
       </div>
     </div>
     <div class="col-md-6 col-lg-4">
-      <div class="feat-card featured anim">
-        <div class="feat-ic"><i class="bi bi-lightning-charge-fill"></i></div>
-        <h3 class="fw-bold fs-6 mb-2">Faster, Better Hiring Decisions</h3>
-        <p class="text-secondary" style="line-height:1.75;margin:0">Get detailed feedback, scorecards, and recommendations to hire the right talent quickly.</p>
+      <div class="feat-card anim" style="background:#fff;border:1.5px solid #e2e4f0;border-radius:16px;padding:32px 28px;box-shadow:0 2px 16px rgba(0,0,0,.06);height:100%;transition-delay:.1s;">
+        <div class="feat-ic" style="width:56px;height:56px;border-radius:50%;background:#7b7dfc;display:flex;align-items:center;justify-content:center;margin-bottom:24px;"><i class="bi bi-lightning-charge-fill" style="font-size:22px;color:#fff;"></i></div>
+        <h3 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:1.25rem;font-weight:800;color:#111;margin-bottom:8px;">Faster, Better Hiring Decisions</h3>
+        <p style="color:#374151;font-size:1.1rem;line-height:1.75;margin:0;">Get detailed feedback, scorecards, and recommendations to hire the right talent quickly.</p>
       </div>
     </div>
     <div class="col-md-6 col-lg-4">
-      <div class="feat-card anim">
-        <div class="feat-ic"><i class="bi bi-shield-fill-check"></i></div>
-        <h3 class="fw-bold fs-6 mb-2">Scalable &amp; Reliable Process</h3>
-        <p class="text-secondary" style="line-height:1.75;margin:0">Whether you're hiring one or hundreds, our process scales with your needs seamlessly.</p>
+      <div class="feat-card anim" style="background:#fff;border:1.5px solid #e2e4f0;border-radius:16px;padding:32px 28px;box-shadow:0 2px 16px rgba(0,0,0,.06);height:100%;transition-delay:.2s;">
+        <div class="feat-ic" style="width:56px;height:56px;border-radius:50%;background:#7b7dfc;display:flex;align-items:center;justify-content:center;margin-bottom:24px;"><i class="bi bi-shield-fill-check" style="font-size:22px;color:#fff;"></i></div>
+        <h3 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:1.25rem;font-weight:800;color:#111;margin-bottom:8px;">Scalable &amp; Reliable Process</h3>
+        <p style="color:#374151;font-size:1.1rem;line-height:1.75;margin:0;">Whether you're hiring one or hundreds, our process scales with your needs seamlessly.</p>
       </div>
     </div>
   </div>
 </section>
-
-<!-- HOW IT WORKS -->
-<section class="hiw-section section-py">
-  <div class="section-px">
-    <div class="row align-items-center g-5">
-      <div class="col-lg-5">
-        <h2 class="fw-bold mb-2" style="font-size:2.2rem">How It Works</h2>
-        <p class="mb-4" style="color:#1f2937;font-size:1.3rem;line-height:1.7;font-weight:600"><strong>A simple and streamlined process to conduct expert interviews and hire the best talent.</strong></p>
-        <div class="d-flex flex-column gap-4">
-          <div class="step anim">
-            <div class="step-num" style="background:#6C63FF"><i class="bi bi-file-earmark-text-fill"></i></div>
-            <div><h4 class="fw-bold mb-1" style="font-size:1.15rem">Post a Requirement</h4><p class="text-secondary mb-0">Share role details, skills, and evaluation criteria.</p></div>
-          </div>
-          <div class="step anim">
-            <div class="step-num" style="background:#3b82f6"><i class="bi bi-grid-fill"></i></div>
-            <div><h4 class="fw-bold mb-1" style="font-size:1.15rem">We Assign Expert Panel</h4><p class="text-secondary mb-0">Our AI matches the best interviewers for your role.</p></div>
-          </div>
-          <div class="step anim">
-            <div class="step-num" style="background:#22c55e"><i class="bi bi-people-fill"></i></div>
-            <div><h4 class="fw-bold mb-1" style="font-size:1.15rem">Interview &amp; Evaluation</h4><p class="text-secondary mb-0">Experts conduct interviews and provide feedback.</p></div>
-          </div>
-          <div class="step anim">
-            <div class="step-num" style="background:#f59e0b"><i class="bi bi-check-lg"></i></div>
-            <div><h4 class="fw-bold mb-1" style="font-size:1.15rem">Hire with Confidence</h4><p class="text-secondary mb-0">Review insights and make data-driven decisions.</p></div>
-          </div>
+<section class="hiw-section" style="background:#FAFAFC;padding:56px 80px;">
+  <div class="row align-items-center g-5">
+    <div class="col-lg-5">
+      <h2 class="anim" style="font-family:'Plus Jakarta Sans',sans-serif;font-size:2.4rem;font-weight:800;margin-bottom:8px;color:#111;">How It Works</h2>
+      <p class="anim" style="color:#1f2937;font-size:1.35rem;line-height:1.7;font-weight:600;margin-bottom:24px;transition-delay:.1s;"><strong>A simple and streamlined process to conduct expert interviews and hire the best talent.</strong></p>
+      <div class="d-flex flex-column gap-4">
+        <div class="step-wrap anim d-flex gap-3 align-items-start" style="transition-delay:.15s;cursor:default;transition:transform .2s ease;">
+          <div class="step-num" style="width:34px;height:34px;border-radius:9px;background:#6C63FF;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;"><i class="bi bi-file-earmark-text-fill" style="font-size:16px;color:#fff;"></i></div>
+          <div><h4 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:1.2rem;font-weight:700;margin-bottom:4px;color:#111;">Post a Requirement</h4><p style="color:#2d3748;font-size:1.1rem;line-height:1.65;margin:0;">Share role details, skills, and evaluation criteria.</p></div>
+        </div>
+        <div class="step-wrap anim d-flex gap-3 align-items-start" style="transition-delay:.25s;cursor:default;transition:transform .2s ease;">
+          <div class="step-num" style="width:34px;height:34px;border-radius:9px;background:#3b82f6;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;"><i class="bi bi-grid-fill" style="font-size:16px;color:#fff;"></i></div>
+          <div><h4 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:1.2rem;font-weight:700;margin-bottom:4px;color:#111;">We Assign Expert Panel</h4><p style="color:#2d3748;font-size:1.1rem;line-height:1.65;margin:0;">Our AI matches the best interviewers for your role.</p></div>
+        </div>
+        <div class="step-wrap anim d-flex gap-3 align-items-start" style="transition-delay:.35s;cursor:default;transition:transform .2s ease;">
+          <div class="step-num" style="width:34px;height:34px;border-radius:9px;background:#22c55e;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;"><i class="bi bi-people-fill" style="font-size:16px;color:#fff;"></i></div>
+          <div><h4 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:1.2rem;font-weight:700;margin-bottom:4px;color:#111;">Interview &amp; Evaluation</h4><p style="color:#2d3748;font-size:1.1rem;line-height:1.65;margin:0;">Experts conduct interviews and provide feedback.</p></div>
+        </div>
+        <div class="step-wrap anim d-flex gap-3 align-items-start" style="transition-delay:.45s;cursor:default;transition:transform .2s ease;">
+          <div class="step-num" style="width:34px;height:34px;border-radius:9px;background:#f59e0b;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;"><i class="bi bi-check-lg" style="font-size:16px;color:#fff;"></i></div>
+          <div><h4 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:1.2rem;font-weight:700;margin-bottom:4px;color:#111;">Hire with Confidence</h4><p style="color:#2d3748;font-size:1.1rem;line-height:1.65;margin:0;">Review insights and make data-driven decisions.</p></div>
         </div>
       </div>
-      <div class="col-lg-7">
-        <div id="howItWorksCarousel" class="carousel slide ip-card anim" data-bs-ride="carousel" data-bs-interval="3000">
-          <div class="carousel-inner">
-            <div class="carousel-item active"><img src="interview panel-1.png" class="d-block w-100" alt="Interview Panel"></div>
-            <div class="carousel-item"><img src="interview panel-2.png" class="d-block w-100" alt="Interview Panel"></div>
-            <div class="carousel-item"><img src="interview panel-3.png" class="d-block w-100" alt="Interview Panel"></div>
-            <div class="carousel-item"><img src="interview panel-4.png" class="d-block w-100" alt="Interview Panel"></div>
-            <div class="carousel-item"><img src="interview panel-5.png" class="d-block w-100" alt="Interview Panel"></div>
-          </div>
+    </div>
+    <div class="col-lg-7">
+      <div id="howItWorksCarousel" class="carousel slide anim" data-bs-ride="carousel" data-bs-interval="3000" style="border-radius:16px;overflow:hidden;">
+        <div class="carousel-inner" style="height:clamp(340px,45vw,560px);border-radius:12px;overflow:hidden;">
+          <div class="carousel-item active" style="height:100%;"><img src="interview panel-1.png" class="d-block w-100" alt="Interview Panel" style="width:100%;height:100%;object-fit:contain;object-position:center;"></div>
+          <div class="carousel-item" style="height:100%;"><img src="interview panel-2.png" class="d-block w-100" alt="Interview Panel" style="width:100%;height:100%;object-fit:contain;object-position:center;"></div>
+          <div class="carousel-item" style="height:100%;"><img src="interview panel-3.png" class="d-block w-100" alt="Interview Panel" style="width:100%;height:100%;object-fit:contain;object-position:center;"></div>
+          <div class="carousel-item" style="height:100%;"><img src="interview panel-4.png" class="d-block w-100" alt="Interview Panel" style="width:100%;height:100%;object-fit:contain;object-position:center;"></div>
+          <div class="carousel-item" style="height:100%;"><img src="interview panel-5.png" class="d-block w-100" alt="Interview Panel" style="width:100%;height:100%;object-fit:contain;object-position:center;"></div>
         </div>
       </div>
     </div>
   </div>
 </section>
-
-<!-- AI SECTION -->
-<section class="ai-section section-py">
-  <div class="section-px">
-    <div class="row align-items-center g-5">
-      <div class="col-lg-6">
-        <div class="laptop-wrap anim">
-          <div id="aiCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
-            <div class="carousel-inner">
-              <div class="carousel-item active"><img src="interview feedback-1.png" class="d-block w-100" alt="Interview Feedback"></div>
-              <div class="carousel-item"><img src="interview feedback-2.png" class="d-block w-100" alt="Interview Feedback"></div>
-              <div class="carousel-item"><img src="interview feedback-3.png" class="d-block w-100" alt="Interview Feedback"></div>
-              <div class="carousel-item"><img src="interview feedback-4.png" class="d-block w-100" alt="Interview Feedback"></div>
-              <div class="carousel-item"><img src="interview feedback-5.png" class="d-block w-100" alt="Interview Feedback"></div>
-            </div>
+<section class="ai-section" style="background:#FAFAFC;padding:56px 80px;">
+  <div class="row align-items-center g-5">
+    <div class="col-lg-6">
+      <div class="laptop-wrap anim" style="filter:drop-shadow(0 16px 40px rgba(0,0,0,.18));">
+        <div id="aiCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000" style="border-radius:12px;overflow:hidden;">
+          <div class="carousel-inner" style="height:clamp(340px,45vw,560px);border-radius:12px;overflow:hidden;">
+            <div class="carousel-item active" style="height:100%;"><img src="interview feedback-1.png" class="d-block w-100" alt="Interview Feedback" style="width:100%;height:100%;object-fit:contain;object-position:center;"></div>
+            <div class="carousel-item" style="height:100%;"><img src="interview feedback-2.png" class="d-block w-100" alt="Interview Feedback" style="width:100%;height:100%;object-fit:contain;object-position:center;"></div>
+            <div class="carousel-item" style="height:100%;"><img src="interview feedback-3.png" class="d-block w-100" alt="Interview Feedback" style="width:100%;height:100%;object-fit:contain;object-position:center;"></div>
+            <div class="carousel-item" style="height:100%;"><img src="interview feedback-4.png" class="d-block w-100" alt="Interview Feedback" style="width:100%;height:100%;object-fit:contain;object-position:center;"></div>
+            <div class="carousel-item" style="height:100%;"><img src="interview feedback-5.png" class="d-block w-100" alt="Interview Feedback" style="width:100%;height:100%;object-fit:contain;object-position:center;"></div>
           </div>
         </div>
       </div>
-      <div class="col-lg-6 anim">
-        <h2 class="fw-bold mb-2" style="font-size:2.2rem;line-height:1.2">AI-Powered Interview<br>Analysis &amp; Reports</h2>
-        <p class="mb-4" style="color:#1f2937;font-size:1.3rem;line-height:1.75;font-weight:500">Leverage AI insights to evaluate candidates better and improve hiring outcomes.</p>
-        <div>
-          <div class="ai-feat">
-            <div class="d-flex align-items-center gap-3">
-              <div class="ai-feat-ic"><i class="bi bi-stars"></i></div>
-              <div><h4>AI-driven feedback summary</h4><p>Get smart analysis and insights.</p></div>
-            </div>
-            <span class="chevron">›</span>
+    </div>
+    <div class="col-lg-6 anim">
+      <h2 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:2.4rem;font-weight:800;line-height:1.2;margin-bottom:8px;color:#111;">AI-Powered Interview<br>Analysis &amp; Reports</h2>
+      <p style="color:#1f2937;font-size:1.35rem;line-height:1.75;font-weight:500;margin-bottom:24px;">Leverage AI insights to evaluate candidates better and improve hiring outcomes.</p>
+      <div>
+        <div class="ai-feat d-flex align-items-center justify-content-between" style="padding:13px 16px;border:1px solid #e5e7eb;border-radius:12px;background:#fff;margin-bottom:10px;">
+          <div class="d-flex align-items-center gap-3">
+            <div class="ai-feat-ic" style="width:36px;height:36px;border-radius:9px;background:rgba(108,99,255,.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="bi bi-stars" style="font-size:16px;color:#7b7dfc;"></i></div>
+            <div><h4 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:1.1rem;font-weight:700;margin-bottom:2px;color:#111;">AI-driven feedback summary</h4><p style="font-size:1.05rem;color:#2d3748;margin:0;line-height:1.55;">Get smart analysis and insights.</p></div>
           </div>
-          <div class="ai-feat">
-            <div class="d-flex align-items-center gap-3">
-              <div class="ai-feat-ic"><i class="bi bi-clock-fill"></i></div>
-              <div><h4>Detailed scorecards</h4><p>Evaluate candidates across key competencies.</p></div>
-            </div>
-            <span class="chevron">›</span>
+          <span class="chevron" style="color:#2b2929;font-size:3rem;font-weight:800;line-height:1;">›</span>
+        </div>
+        <div class="ai-feat d-flex align-items-center justify-content-between" style="padding:13px 16px;border:1px solid #e5e7eb;border-radius:12px;background:#fff;margin-bottom:10px;">
+          <div class="d-flex align-items-center gap-3">
+            <div class="ai-feat-ic" style="width:36px;height:36px;border-radius:9px;background:rgba(108,99,255,.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="bi bi-clock-fill" style="font-size:16px;color:#7b7dfc;"></i></div>
+            <div><h4 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:1.1rem;font-weight:700;margin-bottom:2px;color:#111;">Detailed scorecards</h4><p style="font-size:1.05rem;color:#2d3748;margin:0;line-height:1.55;">Evaluate candidates across key competencies.</p></div>
           </div>
-          <div class="ai-feat">
-            <div class="d-flex align-items-center gap-3">
-              <div class="ai-feat-ic"><i class="bi bi-shield-fill-check"></i></div>
-              <div><h4>Bias-free evaluation</h4><p>Ensure a fair and inclusive hiring process.</p></div>
-            </div>
-            <span class="chevron">›</span>
+          <span class="chevron" style="color:#2b2929;font-size:3rem;font-weight:800;line-height:1;">›</span>
+        </div>
+        <div class="ai-feat d-flex align-items-center justify-content-between" style="padding:13px 16px;border:1px solid #e5e7eb;border-radius:12px;background:#fff;margin-bottom:10px;">
+          <div class="d-flex align-items-center gap-3">
+            <div class="ai-feat-ic" style="width:36px;height:36px;border-radius:9px;background:rgba(108,99,255,.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="bi bi-shield-fill-check" style="font-size:16px;color:#7b7dfc;"></i></div>
+            <div><h4 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:1.1rem;font-weight:700;margin-bottom:2px;color:#111;">Bias-free evaluation</h4><p style="font-size:1.05rem;color:#2d3748;margin:0;line-height:1.55;">Ensure a fair and inclusive hiring process.</p></div>
           </div>
-          <div class="ai-feat">
-            <div class="d-flex align-items-center gap-3">
-              <div class="ai-feat-ic"><i class="bi bi-table"></i></div>
-              <div><h4>Data-backed decision making</h4><p>Hire with confidence using actionable data.</p></div>
-            </div>
-            <span class="chevron">›</span>
+          <span class="chevron" style="color:#2b2929;font-size:3rem;font-weight:800;line-height:1;">›</span>
+        </div>
+        <div class="ai-feat d-flex align-items-center justify-content-between" style="padding:13px 16px;border:1px solid #e5e7eb;border-radius:12px;background:#fff;margin-bottom:10px;">
+          <div class="d-flex align-items-center gap-3">
+            <div class="ai-feat-ic" style="width:36px;height:36px;border-radius:9px;background:rgba(108,99,255,.1);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="bi bi-table" style="font-size:16px;color:#7b7dfc;"></i></div>
+            <div><h4 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:1.1rem;font-weight:700;margin-bottom:2px;color:#111;">Data-backed decision making</h4><p style="font-size:1.05rem;color:#2d3748;margin:0;line-height:1.55;">Hire with confidence using actionable data.</p></div>
           </div>
+          <span class="chevron" style="color:#2b2929;font-size:3rem;font-weight:800;line-height:1;">›</span>
         </div>
       </div>
     </div>
   </div>
 </section>
-
-<!-- STATS STRIP -->
-<div class="stats-strip">
-  <div class="stats-inner">
+<div class="stats-strip" style="background:#eef0ff;padding:20px 48px;">
+  <div style="background:#7b7dfc;border-radius:16px;overflow:hidden;">
     <div class="row g-0">
-      <div class="col-6 col-lg-3 stat-div">
-        <div class="stat-item anim">
-          <div class="stat-ic-wrap"><i class="bi bi-people-fill"></i></div>
-          <div><div class="stat-val">300+</div><div class="stat-lbl">Expert Interviewers</div></div>
+      <div class="col-6 col-lg-3" style="position:relative;">
+        <div class="stat-item anim d-flex align-items-center gap-3" style="color:#fff;padding:26px 28px;">
+          <div class="stat-ic-wrap" style="width:44px;height:44px;border-radius:10px;background:rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="bi bi-people-fill" style="font-size:20px;color:#fff;"></i></div>
+          <div><div class="stat-val" style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:1.65rem;line-height:1.1;margin-bottom:2px;">300+</div><div class="stat-lbl" style="font-size:0.82rem;opacity:.75;line-height:1.3;color:#fff;">Expert Interviewers</div></div>
         </div>
       </div>
-      <div class="col-6 col-lg-3 stat-div">
-        <div class="stat-item anim">
-          <div class="stat-ic-wrap"><i class="bi bi-bell-fill"></i></div>
-          <div><div class="stat-val">48 Hours</div><div class="stat-lbl">Average Turnaround</div></div>
+      <div class="col-6 col-lg-3 stat-div" style="position:relative;">
+        <div class="stat-item anim d-flex align-items-center gap-3" style="color:#fff;padding:26px 28px;border-left:1px solid rgba(255,255,255,.22);transition-delay:.1s;">
+          <div class="stat-ic-wrap" style="width:44px;height:44px;border-radius:10px;background:rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="bi bi-bell-fill" style="font-size:20px;color:#fff;"></i></div>
+          <div><div class="stat-val" style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:1.65rem;line-height:1.1;margin-bottom:2px;">48 Hours</div><div class="stat-lbl" style="font-size:0.82rem;opacity:.75;line-height:1.3;color:#fff;">Average Turnaround</div></div>
         </div>
       </div>
-      <div class="col-6 col-lg-3 stat-div">
-        <div class="stat-item anim">
-          <div class="stat-ic-wrap"><i class="bi bi-shield-fill-check"></i></div>
-          <div><div class="stat-val">95%</div><div class="stat-lbl">Client Satisfaction</div></div>
+      <div class="col-6 col-lg-3 stat-div" style="position:relative;">
+        <div class="stat-item anim d-flex align-items-center gap-3" style="color:#fff;padding:26px 28px;border-left:1px solid rgba(255,255,255,.22);transition-delay:.2s;">
+          <div class="stat-ic-wrap" style="width:44px;height:44px;border-radius:10px;background:rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="bi bi-shield-fill-check" style="font-size:20px;color:#fff;"></i></div>
+          <div><div class="stat-val" style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:1.65rem;line-height:1.1;margin-bottom:2px;">95%</div><div class="stat-lbl" style="font-size:0.82rem;opacity:.75;line-height:1.3;color:#fff;">Client Satisfaction</div></div>
         </div>
       </div>
       <div class="col-6 col-lg-3">
-        <div class="stat-item anim">
-          <div class="stat-ic-wrap"><i class="bi bi-award-fill"></i></div>
-          <div><div class="stat-val">99%</div><div class="stat-lbl">Successful Interviews</div></div>
+        <div class="stat-item anim d-flex align-items-center gap-3" style="color:#fff;padding:26px 28px;border-left:1px solid rgba(255,255,255,.22);transition-delay:.3s;">
+          <div class="stat-ic-wrap" style="width:44px;height:44px;border-radius:10px;background:rgba(255,255,255,.15);display:flex;align-items:center;justify-content:center;flex-shrink:0;"><i class="bi bi-award-fill" style="font-size:20px;color:#fff;"></i></div>
+          <div><div class="stat-val" style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:1.65rem;line-height:1.1;margin-bottom:2px;">99%</div><div class="stat-lbl" style="font-size:0.82rem;opacity:.75;line-height:1.3;color:#fff;">Successful Interviews</div></div>
         </div>
       </div>
     </div>
   </div>
 </div>
-
-<!-- PRICING -->
-<section class="pricing-section section-py section-px text-center">
-  <h2 class="fw-bold mb-2 anim" style="font-size:2rem">Flexible Plans for Every Hiring Need</h2>
-  <p class="text-secondary mb-4 anim">Choose a plan that fits your team's hiring goals.</p>
-  <div class="d-inline-flex align-items-center gap-3 mb-5 anim">
-    <span class="billing-lbl active" id="lbl-monthly">Billed Monthly</span>
-    <div class="billing-toggle" id="billing-toggle" onclick="toggleBilling()"><div class="billing-knob"></div></div>
-    <span class="billing-lbl" id="lbl-annual">Billed Annually</span>
-    <span class="save-pill">Save 20%</span>
+<section class="pricing-section" style="background:#FAFAFC;padding:56px 80px;text-align:center;">
+  <h2 class="anim" style="font-family:'Plus Jakarta Sans',sans-serif;font-size:2.2rem;font-weight:800;margin-bottom:8px;color:#111;">Flexible Plans for Every Hiring Need</h2>
+  <p class="anim" style="color:#374151;font-size:1.3rem;font-weight:500;margin-bottom:32px;transition-delay:.1s;">Choose a plan that fits your team's hiring goals.</p>
+  <div class="d-inline-flex align-items-center gap-3 mb-5 anim" style="transition-delay:.2s;">
+    <span id="lbl-monthly" style="font-weight:700;color:#111;font-size:0.92rem;">Billed Monthly</span>
+    <div id="billing-toggle" onclick="toggleBilling()" style="width:42px;height:24px;background:#d1d5db;border-radius:12px;padding:3px;cursor:pointer;display:flex;align-items:center;transition:background .3s;">
+      <div id="billing-knob" style="width:18px;height:18px;background:#fff;border-radius:50%;box-shadow:0 1px 4px rgba(0,0,0,.25);transition:transform .3s;"></div>
+    </div>
+    <span id="lbl-annual" style="font-weight:500;color:#6b7280;font-size:0.92rem;">Billed Annually</span>
+    <span style="background:#d1fae5;color:#059669;font-size:0.78rem;font-weight:700;padding:4px 12px;border-radius:20px;">Save 20%</span>
   </div>
   <div class="row g-4 align-items-start">
-    <div class="col-md-6 col-lg-4">
-      <div class="plan anim">
-        <div class="plan-name">Starter</div>
-        <div class="plan-desc">Perfect for small teams</div>
-        <div class="plan-price">$199 <span>/ interview</span></div>
-        <ul class="plan-feats">
-          <li>1–3 Interviews</li>
-          <li>Basic Reports</li>
-          <li>Email Support</li>
-          <li>3 Expert Interviewers</li>
-          <li>Basic Candidate Insights</li>
+    <div class="col-md-6 col-lg-4 plan-col-1">
+      <div class="plan-card anim" style="background:#fff;border:1.5px solid #e2e4f0;border-radius:16px;padding:32px 28px;text-align:left;position:relative;display:flex;flex-direction:column;height:100%;">
+        <div class="plan-name" style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:1.3rem;margin-bottom:4px;color:#111;">Starter</div>
+        <div class="plan-desc" style="font-size:0.88rem;color:#6b7280;margin-bottom:20px;line-height:1.5;">Perfect for small teams</div>
+        <div style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:2.4rem;margin-bottom:20px;line-height:1;display:flex;align-items:baseline;gap:6px;"><span class="plan-price" style="color:#111;">$199</span><span class="plan-per" style="font-size:0.88rem;font-weight:400;color:#9ca3af;">/ interview</span></div>
+        <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:11px;margin:0 0 28px;font-size:0.92rem;flex-grow:1;">
+          <li class="plan-feat d-flex align-items-center gap-2" style="color:#1f2937;"><span class="check-icon" style="width:18px;height:18px;border-radius:50%;flex-shrink:0;background-color:rgba(108,99,255,.1);background-image:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236C63FF' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E&quot;);background-repeat:no-repeat;background-position:center;background-size:10px;display:inline-block;"></span>1–3 Interviews</li>
+          <li class="plan-feat d-flex align-items-center gap-2" style="color:#1f2937;"><span class="check-icon" style="width:18px;height:18px;border-radius:50%;flex-shrink:0;background-color:rgba(108,99,255,.1);background-image:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236C63FF' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E&quot;);background-repeat:no-repeat;background-position:center;background-size:10px;display:inline-block;"></span>Basic Reports</li>
+          <li class="plan-feat d-flex align-items-center gap-2" style="color:#1f2937;"><span class="check-icon" style="width:18px;height:18px;border-radius:50%;flex-shrink:0;background-color:rgba(108,99,255,.1);background-image:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236C63FF' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E&quot;);background-repeat:no-repeat;background-position:center;background-size:10px;display:inline-block;"></span>Email Support</li>
+          <li class="plan-feat d-flex align-items-center gap-2" style="color:#1f2937;"><span class="check-icon" style="width:18px;height:18px;border-radius:50%;flex-shrink:0;background-color:rgba(108,99,255,.1);background-image:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236C63FF' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E&quot;);background-repeat:no-repeat;background-position:center;background-size:10px;display:inline-block;"></span>3 Expert Interviewers</li>
+          <li class="plan-feat d-flex align-items-center gap-2" style="color:#1f2937;"><span class="check-icon" style="width:18px;height:18px;border-radius:50%;flex-shrink:0;background-color:rgba(108,99,255,.1);background-image:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236C63FF' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E&quot;);background-repeat:no-repeat;background-position:center;background-size:10px;display:inline-block;"></span>Basic Candidate Insights</li>
         </ul>
-        <button class="btn-plan">Get Started</button>
+        <button class="plan-btn" style="margin-top:auto;width:100%;padding:14px;border-radius:10px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.95rem;cursor:pointer;border:1.5px solid #d1d5db;background:#fff;color:#7b7dfc;transition:all .3s;">Get Started</button>
       </div>
     </div>
-    <div class="col-md-6 col-lg-4">
-      <div class="plan popular anim">
-        <div class="plan-badge">Most Popular</div>
-        <div class="plan-name">Standard</div>
-        <div class="plan-desc">Ideal for growing companies</div>
-        <div class="plan-price">$399 <span>/ interview</span></div>
-        <ul class="plan-feats">
-          <li>4–10 Interviews</li>
-          <li>Detailed Reports</li>
-          <li>Priority Support</li>
-          <li>5 Expert Interviewers</li>
-          <li>AI Insights</li>
+    <div class="col-md-6 col-lg-4 plan-col-2">
+      <div class="plan-card anim" style="background:#fff;border:1.5px solid #e2e4f0;border-radius:16px;padding:32px 28px;text-align:left;position:relative;display:flex;flex-direction:column;height:100%;box-shadow:0 4px 24px rgba(123,125,252,.18);">
+        <div class="plan-badge" style="position:absolute;top:22px;right:20px;background:rgba(123,125,252,.12);color:#7b7dfc;font-weight:600;font-size:0.7rem;padding:5px 12px;border-radius:8px;transition:background .3s,color .3s;">Most Popular</div>
+        <div class="plan-name" style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:1.3rem;margin-bottom:4px;color:#111;">Standard</div>
+        <div class="plan-desc" style="font-size:0.88rem;color:#6b7280;margin-bottom:20px;line-height:1.5;">Ideal for growing companies</div>
+        <div style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:2.4rem;margin-bottom:20px;line-height:1;display:flex;align-items:baseline;gap:6px;"><span class="plan-price" style="color:#111;">$399</span><span class="plan-per" style="font-size:0.88rem;font-weight:400;color:#9ca3af;">/ interview</span></div>
+        <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:11px;margin:0 0 28px;font-size:0.92rem;flex-grow:1;">
+          <li class="plan-feat d-flex align-items-center gap-2" style="color:#1f2937;"><span class="check-icon" style="width:18px;height:18px;border-radius:50%;flex-shrink:0;background-color:rgba(108,99,255,.1);background-image:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236C63FF' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E&quot;);background-repeat:no-repeat;background-position:center;background-size:10px;display:inline-block;"></span>4–10 Interviews</li>
+          <li class="plan-feat d-flex align-items-center gap-2" style="color:#1f2937;"><span class="check-icon" style="width:18px;height:18px;border-radius:50%;flex-shrink:0;background-color:rgba(108,99,255,.1);background-image:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236C63FF' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E&quot;);background-repeat:no-repeat;background-position:center;background-size:10px;display:inline-block;"></span>Detailed Reports</li>
+          <li class="plan-feat d-flex align-items-center gap-2" style="color:#1f2937;"><span class="check-icon" style="width:18px;height:18px;border-radius:50%;flex-shrink:0;background-color:rgba(108,99,255,.1);background-image:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236C63FF' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E&quot;);background-repeat:no-repeat;background-position:center;background-size:10px;display:inline-block;"></span>Priority Support</li>
+          <li class="plan-feat d-flex align-items-center gap-2" style="color:#1f2937;"><span class="check-icon" style="width:18px;height:18px;border-radius:50%;flex-shrink:0;background-color:rgba(108,99,255,.1);background-image:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236C63FF' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E&quot;);background-repeat:no-repeat;background-position:center;background-size:10px;display:inline-block;"></span>5 Expert Interviewers</li>
+          <li class="plan-feat d-flex align-items-center gap-2" style="color:#1f2937;"><span class="check-icon" style="width:18px;height:18px;border-radius:50%;flex-shrink:0;background-color:rgba(108,99,255,.1);background-image:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236C63FF' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E&quot;);background-repeat:no-repeat;background-position:center;background-size:10px;display:inline-block;"></span>AI Insights</li>
         </ul>
-        <button class="btn-plan">Get Started</button>
+        <button class="plan-btn" style="margin-top:auto;width:100%;padding:14px;border-radius:10px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.95rem;cursor:pointer;border:1.5px solid #d1d5db;background:#fff;color:#7b7dfc;transition:all .3s;">Get Started</button>
       </div>
     </div>
-    <div class="col-md-6 col-lg-4 mx-auto">
-      <div class="plan anim">
-        <div class="plan-name">Premium</div>
-        <div class="plan-desc">For large scale hiring</div>
-        <div class="plan-price">$699 <span>/ interview</span></div>
-        <ul class="plan-feats">
-          <li>Unlimited Interviews</li>
-          <li>Advanced Reports</li>
-          <li>Dedicated Support</li>
-          <li>10+ Expert Interviewers</li>
-          <li>AI Insights &amp; Analytics</li>
+    <div class="col-md-6 col-lg-4 mx-auto plan-col-3">
+      <div class="plan-card anim" style="background:#fff;border:1.5px solid #e2e4f0;border-radius:16px;padding:32px 28px;text-align:left;position:relative;display:flex;flex-direction:column;height:100%;">
+        <div class="plan-name" style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:1.3rem;margin-bottom:4px;color:#111;">Premium</div>
+        <div class="plan-desc" style="font-size:0.88rem;color:#6b7280;margin-bottom:20px;line-height:1.5;">For large scale hiring</div>
+        <div style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;font-size:2.4rem;margin-bottom:20px;line-height:1;display:flex;align-items:baseline;gap:6px;"><span class="plan-price" style="color:#111;">$699</span><span class="plan-per" style="font-size:0.88rem;font-weight:400;color:#9ca3af;">/ interview</span></div>
+        <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:11px;margin:0 0 28px;font-size:0.92rem;flex-grow:1;">
+          <li class="plan-feat d-flex align-items-center gap-2" style="color:#1f2937;"><span class="check-icon" style="width:18px;height:18px;border-radius:50%;flex-shrink:0;background-color:rgba(108,99,255,.1);background-image:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236C63FF' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E&quot;);background-repeat:no-repeat;background-position:center;background-size:10px;display:inline-block;"></span>Unlimited Interviews</li>
+          <li class="plan-feat d-flex align-items-center gap-2" style="color:#1f2937;"><span class="check-icon" style="width:18px;height:18px;border-radius:50%;flex-shrink:0;background-color:rgba(108,99,255,.1);background-image:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236C63FF' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E&quot;);background-repeat:no-repeat;background-position:center;background-size:10px;display:inline-block;"></span>Advanced Reports</li>
+          <li class="plan-feat d-flex align-items-center gap-2" style="color:#1f2937;"><span class="check-icon" style="width:18px;height:18px;border-radius:50%;flex-shrink:0;background-color:rgba(108,99,255,.1);background-image:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236C63FF' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E&quot;);background-repeat:no-repeat;background-position:center;background-size:10px;display:inline-block;"></span>Dedicated Support</li>
+          <li class="plan-feat d-flex align-items-center gap-2" style="color:#1f2937;"><span class="check-icon" style="width:18px;height:18px;border-radius:50%;flex-shrink:0;background-color:rgba(108,99,255,.1);background-image:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236C63FF' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E&quot;);background-repeat:no-repeat;background-position:center;background-size:10px;display:inline-block;"></span>10+ Expert Interviewers</li>
+          <li class="plan-feat d-flex align-items-center gap-2" style="color:#1f2937;"><span class="check-icon" style="width:18px;height:18px;border-radius:50%;flex-shrink:0;background-color:rgba(108,99,255,.1);background-image:url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236C63FF' stroke-width='2.8' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E&quot;);background-repeat:no-repeat;background-position:center;background-size:10px;display:inline-block;"></span>AI Insights &amp; Analytics</li>
         </ul>
-        <button class="btn-plan">Get Started</button>
+        <button class="plan-btn" style="margin-top:auto;width:100%;padding:14px;border-radius:10px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.95rem;cursor:pointer;border:1.5px solid #d1d5db;background:#fff;color:#7b7dfc;transition:all .3s;">Get Started</button>
       </div>
     </div>
   </div>
 </section>
-
-<!-- CTA BANNER -->
-<section class="cta-banner section-px pb-5">
-  <div class="cta-inner p-4 p-lg-5 anim">
+<section style="background:#FAFAFC;padding:0 80px 56px;">
+  <div class="cta-inner anim" style="background:#f4f6ff;border-radius:24px;border:1px solid #dcdceb;box-shadow:0 10px 25px -5px rgba(0,0,0,.1),0 8px 10px -6px rgba(0,0,0,.1);position:relative;overflow:hidden;padding:40px 48px;">
     <div class="d-flex align-items-center justify-content-between flex-wrap gap-4">
       <div class="d-flex align-items-center gap-4">
-        <div class="cta-icon-wrap flex-shrink-0 anim"><i class="bi bi-people-fill"></i></div>
-        <div class="anim">
-          <h2 class="fw-bold mb-1" style="font-size:2rem;color:#111827;line-height:1.15">Ready to Build Your Expert<br>Interview Panel?</h2>
-          <p class="mb-0" style="color:#374151;font-size:1rem;line-height:1.6;font-weight:500">Hire expert panels in 24 hours and make smarter hiring decisions—faster than ever.</p>
+        <div class="cta-icon-wrap" style="width:72px;height:72px;min-width:72px;border-radius:50%;background:linear-gradient(135deg,#8d82ff,#7b7dfc);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+          <i class="bi bi-people-fill" style="font-size:30px;color:#fff;"></i>
+        </div>
+        <div>
+          <h2 style="font-family:'Plus Jakarta Sans',sans-serif;font-size:2.1rem;font-weight:800;color:#111827;line-height:1.15;margin-bottom:4px;">Ready to Build Your Expert<br>Interview Panel?</h2>
+          <p style="color:#374151;font-size:1.1rem;line-height:1.6;font-weight:500;margin:0;">Hire expert panels in 24 hours and make smarter hiring decisions—faster than ever.</p>
         </div>
       </div>
-      <div class="d-flex align-items-center gap-3 flex-wrap anim">
-        <a href="#" class="btn-cta-primary">Hire Expert Panel <span>→</span></a>
-        <a href="#" class="btn-cta-outline">Talk to Sales</a>
+      <div class="d-flex align-items-center gap-3 flex-wrap">
+        <a href="#" class="btn-cta-primary btn-shimmer" style="background:#ffcd00;color:#111827;border:none;padding:15px 34px;border-radius:12px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.98rem;text-decoration:none;display:inline-flex;align-items:center;gap:16px;box-shadow:0 6px 18px rgba(255,205,0,.28);white-space:nowrap;">Hire Expert Panel <span>→</span></a>
+        <a href="#" class="btn-cta-outline" style="background:#fff;color:#111827;border:1.5px solid #d8dbe5;padding:14px 32px;border-radius:12px;font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:0.98rem;text-decoration:none;white-space:nowrap;transition:border-color .25s,color .25s;">Talk to Sales</a>
       </div>
-    </div>
-    <div class="dot-grid">
-      <span></span><span></span><span></span><span></span>
-      <span></span><span></span><span></span><span></span>
-      <span></span><span></span><span></span><span></span>
-      <span></span><span></span><span></span><span></span>
     </div>
   </div>
 </section>
-
-<!-- FOOTER -->
-<footer class="py-5 section-px">
+<footer style="background:#fff;border-top:1px solid #f0f0f8;padding:48px 80px 32px;">
   <div class="row g-4 mb-4">
     <div class="col-lg-3 col-md-6 anim">
-      <a href="#" class="navbar-brand mb-2"><img src="logo.png" alt="FlexWork" style="height:68px;width:auto;"></a>
+      <a href="#" style="display:inline-block;margin-bottom:8px;"><img src="logo.png" alt="FlexWork" style="height:88px;width:auto;"></a>
       <div class="d-flex gap-2 mt-2">
-        <a href="https://www.linkedin.com/company/flexwork.in" target="_blank" rel="noopener noreferrer" class="soc" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-        <a href="https://x.com/flexwork_in" target="_blank" rel="noopener noreferrer" class="soc" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
-        <a href="https://www.facebook.com/flexwork.in" target="_blank" rel="noopener noreferrer" class="soc" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-        <a href="https://www.instagram.com/flexwork_in/" target="_blank" rel="noopener noreferrer" class="soc" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+        <a href="https://www.linkedin.com/company/flexwork.in" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="soc soc-link" style="width:42px;height:42px;border:1px solid #e5e7eb;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#6b7280;text-decoration:none;"><i class="bi bi-linkedin" style="font-size:18px;"></i></a>
+        <a href="https://x.com/flexwork_in" target="_blank" rel="noopener noreferrer" aria-label="Twitter" class="soc soc-link" style="width:42px;height:42px;border:1px solid #e5e7eb;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#6b7280;text-decoration:none;"><i class="bi bi-twitter-x" style="font-size:18px;"></i></a>
+        <a href="https://www.facebook.com/flexwork.in" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="soc soc-link" style="width:42px;height:42px;border:1px solid #e5e7eb;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#6b7280;text-decoration:none;"><i class="bi bi-facebook" style="font-size:18px;"></i></a>
+        <a href="https://www.instagram.com/flexwork_in/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="soc soc-link" style="width:42px;height:42px;border:1px solid #e5e7eb;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#6b7280;text-decoration:none;"><i class="bi bi-instagram" style="font-size:18px;"></i></a>
       </div>
     </div>
-    <div class="col-lg-2 col-md-6 col-6 foot-col anim">
-      <h4>Company</h4>
-      <ul>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Careers</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Contact Us</a></li>
+    <div class="col-lg-2 col-md-6 col-6 foot-col anim" style="transition-delay:.1s;">
+      <h4 style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:1.15rem;margin-bottom:18px;color:#111;">Company</h4>
+      <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:14px;margin:0;">
+        <li><a href="#" style="text-decoration:none;color:#6b7280;font-size:1rem;transition:color .2s;">About Us</a></li>
+        <li><a href="#" style="text-decoration:none;color:#6b7280;font-size:1rem;transition:color .2s;">Careers</a></li>
+        <li><a href="#" style="text-decoration:none;color:#6b7280;font-size:1rem;transition:color .2s;">Blog</a></li>
+        <li><a href="#" style="text-decoration:none;color:#6b7280;font-size:1rem;transition:color .2s;">Contact Us</a></li>
       </ul>
     </div>
-    <div class="col-lg-2 col-md-6 col-6 foot-col anim">
-      <h4>Resources</h4>
-      <ul>
-        <li><a href="#">Help Center</a></li>
-        <li><a href="#">Guides</a></li>
-        <li><a href="#">Webinars</a></li>
-        <li><a href="#">Success Stories</a></li>
+    <div class="col-lg-2 col-md-6 col-6 foot-col anim" style="transition-delay:.2s;">
+      <h4 style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:1.15rem;margin-bottom:18px;color:#111;">Resources</h4>
+      <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:14px;margin:0;">
+        <li><a href="#" style="text-decoration:none;color:#6b7280;font-size:1rem;">Help Center</a></li>
+        <li><a href="#" style="text-decoration:none;color:#6b7280;font-size:1rem;">Guides</a></li>
+        <li><a href="#" style="text-decoration:none;color:#6b7280;font-size:1rem;">Webinars</a></li>
+        <li><a href="#" style="text-decoration:none;color:#6b7280;font-size:1rem;">Success Stories</a></li>
       </ul>
     </div>
-    <div class="col-lg-2 col-md-6 col-6 foot-col anim">
-      <h4>Legal</h4>
-      <ul>
-        <li><a href="#">Terms of Service</a></li>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Cookie Policy</a></li>
+    <div class="col-lg-2 col-md-6 col-6 foot-col anim" style="transition-delay:.3s;">
+      <h4 style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:1.15rem;margin-bottom:18px;color:#111;">Legal</h4>
+      <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:14px;margin:0;">
+        <li><a href="#" style="text-decoration:none;color:#6b7280;font-size:1rem;">Terms of Service</a></li>
+        <li><a href="#" style="text-decoration:none;color:#6b7280;font-size:1rem;">Privacy Policy</a></li>
+        <li><a href="#" style="text-decoration:none;color:#6b7280;font-size:1rem;">Cookie Policy</a></li>
       </ul>
     </div>
-    <div class="col-lg-3 col-md-6 foot-col anim">
-      <h4>Subscribe to our newsletter</h4>
-      <div class="nl-form">
-        <input class="nl-input" type="email" placeholder="Enter your email">
-        <button class="nl-btn"><i class="bi bi-arrow-right"></i></button>
+    <div class="col-lg-3 col-md-6 foot-col anim" style="transition-delay:.4s;">
+      <h4 style="font-family:'Plus Jakarta Sans',sans-serif;font-weight:700;font-size:1.15rem;margin-bottom:18px;color:#111;">Subscribe to our newsletter</h4>
+      <div style="display:flex;border:1.5px solid #e5e7eb;border-radius:12px;overflow:hidden;margin-top:12px;">
+        <input type="email" placeholder="Enter your email" style="flex:1;padding:14px 16px;border:none;outline:none;font-family:'DM Sans',sans-serif;font-size:1rem;color:#111;">
+        <button class="nl-btn" style="background:#ffcd00;border:none;padding:14px 20px;cursor:pointer;"><i class="bi bi-arrow-right" style="font-size:16px;color:#fff;"></i></button>
       </div>
     </div>
   </div>
-  <div class="foot-bottom pt-3 text-center anim">© 2024 FlexWork. All rights reserved.</div>
+  <div class="foot-bottom anim" style="border-top:1px solid #f0f0f8;font-size:1rem;color:#9ca3af;padding-top:20px;text-align:center;transition-delay:.5s;">© 2024 FlexWork. All rights reserved.</div>
 </footer>
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
-  // Force scroll to top on page load/reload
-  if ('scrollRestoration' in history) {
-    history.scrollRestoration = 'manual';
-  }
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
   window.scrollTo(0, 0);
-function toggleBilling() {
-  const t = document.getElementById('billing-toggle');
-  const lm = document.getElementById('lbl-monthly');
-  const la = document.getElementById('lbl-annual');
-  t.classList.toggle('on');
-  if (t.classList.contains('on')) { lm.classList.remove('active'); la.classList.add('active'); }
-  else { lm.classList.add('active'); la.classList.remove('active'); }
-}
-const obs = new IntersectionObserver((entries) => {
-  entries.forEach((e, i) => { if (e.isIntersecting) { setTimeout(() => e.target.classList.add('vis'), i * 80); } });
-}, { threshold: 0.1 });
-document.querySelectorAll('.anim').forEach(el => obs.observe(el));
+  var obs = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) {
+        e.target.classList.add('vis');
+        obs.unobserve(e.target);
+      }}); }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.anim').forEach(function(el){ obs.observe(el); });
+  document.querySelectorAll(
+    '.btn-hero-primary,.btn-hero-secondary,.btn-nav-cta,.btn-cta-primary,.btn-cta-outline,.plan-btn,.btn-shimmer,.mobile-cta'
+  ).forEach(function(btn) {
+    btn.classList.add('btn-ripple');
+    btn.addEventListener('click', function(e) {
+      var r = document.createElement('span');
+      r.className = 'ripple-circle';
+      var rect = btn.getBoundingClientRect();
+      var size = Math.max(rect.width, rect.height);
+      r.style.cssText = 'width:' + size + 'px;height:' + size + 'px;left:' + (e.clientX - rect.left - size/2) + 'px;top:' + (e.clientY - rect.top - size/2) + 'px;margin:0;';
+      btn.appendChild(r);
+      setTimeout(function(){ r.remove(); }, 600);
+    });});
+  var billingOn = false;
+  function toggleBilling() {
+    billingOn = !billingOn;
+    var toggle = document.getElementById('billing-toggle');
+    var knob = document.getElementById('billing-knob');
+    var lm = document.getElementById('lbl-monthly');
+    var la = document.getElementById('lbl-annual');
+    if (billingOn) {
+      toggle.style.background = '#7b7dfc';
+      knob.style.transform = 'translateX(18px)';
+      lm.style.fontWeight = '500'; lm.style.color = '#6b7280';
+      la.style.fontWeight = '700'; la.style.color = '#111';
+    } else {
+      toggle.style.background = '#d1d5db';
+      knob.style.transform = 'translateX(0)';
+      lm.style.fontWeight = '700'; lm.style.color = '#111';
+      la.style.fontWeight = '500'; la.style.color = '#6b7280';
+    }  }
 </script>
 </body>
 </html>
